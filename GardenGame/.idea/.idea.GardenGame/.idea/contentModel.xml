@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\PRO_TEAM_C#\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\PRO_TEAM_C#\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_GardenGame.-567027727.00" t="ExcludeRecursive" />
+    <e p="C:\Users\PRO_TEAM_C#\GardenGame" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="#OnePotatoKingdom_FULL" t="Include">
+          <e p="Materials" t="Include">
+            <e p="Materials" t="Include">
+              <e p="Alien" t="Include">
+                <e p="Alien_Designs1" t="Include" />
+                <e p="Alien_Designs10" t="Include" />
+                <e p="Alien_Designs2" t="Include" />
+                <e p="Alien_Designs3" t="Include" />
+                <e p="Alien_Designs4" t="Include" />
+                <e p="Alien_Designs5" t="Include" />
+                <e p="Alien_Designs6" t="Include" />
+                <e p="Alien_Designs7" t="Include" />
+                <e p="Alien_Designs8" t="Include" />
+                <e p="Alien_Designs9" t="Include" />
+              </e>
+              <e p="Desert" t="Include">
+                <e p="Desert_Design1" t="Include" />
+                <e p="Desert_Design2" t="Include" />
+                <e p="Desert_Design3" t="Include" />
+                <e p="Desert_Design4" t="Include" />
+                <e p="Desert_Design5" t="Include" />
+              </e>
+              <e p="Earth_Like" t="Include">
+                <e p="Earth-Like_Designs1" t="Include" />
+                <e p="Earth-Like_Designs10" t="Include" />
+                <e p="Earth-Like_Designs2" t="Include" />
+                <e p="Earth-Like_Designs3" t="Include" />
+                <e p="Earth-Like_Designs4" t="Include" />
+                <e p="Earth-Like_Designs5" t="Include" />
+                <e p="Earth-Like_Designs6" t="Include" />
+                <e p="Earth-Like_Designs7" t="Include" />
+                <e p="Earth-Like_Designs8" t="Include" />
+                <e p="Earth-Like_Designs9" t="Include" />
+              </e>
+              <e p="Frozen" t="Include">
+                <e p="Frozen_Design1" t="Include" />
+                <e p="Frozen_Design2" t="Include" />
+                <e p="Frozen_Design3" t="Include" />
+                <e p="Frozen_Design4" t="Include" />
+                <e p="Frozen_Design5" t="Include" />
+              </e>
+              <e p="Temperate" t="Include">
+                <e p="Temperate_Design1" t="Include" />
+                <e p="Temperate_Design2" t="Include" />
+                <e p="Temperate_Design3" t="Include" />
+                <e p="Temperate_Design4" t="Include" />
+                <e p="Temperate_Design5" t="Include" />
+              </e>
+              <e p="Tundra" t="Include">
+                <e p="Tundra_Design1" t="Include" />
+                <e p="Tundra_Design2" t="Include" />
+                <e p="Tundra_Design3" t="Include" />
+                <e p="Tundra_Design4" t="Include" />
+                <e p="Tundra_Design5" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Models" t="Include">
+            <e p="#Planets" t="Include">
+              <e p="Alien" t="Include">
+                <e p="Alien_Designs1" t="Include" />
+                <e p="Alien_Designs10" t="Include" />
+                <e p="Alien_Designs2" t="Include" />
+                <e p="Alien_Designs3" t="Include" />
+                <e p="Alien_Designs4" t="Include" />
+                <e p="Alien_Designs5" t="Include" />
+                <e p="Alien_Designs6" t="Include" />
+                <e p="Alien_Designs7" t="Include" />
+                <e p="Alien_Designs8" t="Include" />
+                <e p="Alien_Designs9" t="Include" />
+              </e>
+              <e p="Desert" t="Include">
+                <e p="Desert_Design1" t="Include" />
+                <e p="Desert_Design2" t="Include" />
+                <e p="Desert_Design3" t="Include" />
+                <e p="Desert_Design4" t="Include" />
+                <e p="Desert_Design5" t="Include" />
+              </e>
+              <e p="Earth-Like" t="Include">
+                <e p="Earth-Like_Designs1" t="Include" />
+                <e p="Earth-Like_Designs10" t="Include" />
+                <e p="Earth-Like_Designs2" t="Include" />
+                <e p="Earth-Like_Designs3" t="Include" />
+                <e p="Earth-Like_Designs4" t="Include" />
+                <e p="Earth-Like_Designs5" t="Include" />
+                <e p="Earth-Like_Designs6" t="Include" />
+                <e p="Earth-Like_Designs7" t="Include" />
+                <e p="Earth-Like_Designs8" t="Include" />
+                <e p="Earth-Like_Designs9" t="Include" />
+              </e>
+              <e p="Frozen" t="Include">
+                <e p="Frozen_Design1" t="Include" />
+                <e p="Frozen_Design2" t="Include" />
+                <e p="Frozen_Design3" t="Include" />
+                <e p="Frozen_Design4" t="Include" />
+                <e p="Frozen_Design5" t="Include" />
+              </e>
+              <e p="Temperate" t="Include">
+                <e p="Temperate_Design1" t="Include" />
+                <e p="Temperate_Design2" t="Include" />
+                <e p="Temperate_Design3" t="Include" />
+                <e p="Temperate_Design4" t="Include" />
+                <e p="Temperate_Design5" t="Include" />
+              </e>
+              <e p="Tundra" t="Include">
+                <e p="Tundra_Design1" t="Include" />
+                <e p="Tundra_Design2" t="Include" />
+                <e p="Tundra_Design3" t="Include" />
+                <e p="Tundra_Design4" t="Include" />
+                <e p="Tundra_Design5" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Prefabs" t="Include">
+            <e p="#Planets" t="Include">
+              <e p="Alien" t="Include" />
+              <e p="Desert" t="Include" />
+              <e p="Earth-Like" t="Include" />
+              <e p="Frozen" t="Include" />
+              <e p="Temperate" t="Include" />
+              <e p="Tundra" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Animation" t="Include">
+          <e p="MenuAnimation" t="Include" />
+          <e p="PlayerAnimation" t="Include" />
+          <e p="RewardAnim" t="Include" />
+        </e>
+        <e p="Audio" t="Include" />
+        <e p="AurynSky" t="Include">
+          <e p="Desert Pack" t="Include">
+            <e p="Materials" t="Include" />
+            <e p="Models" t="Include" />
+            <e p="Prefabs" t="Include">
+              <e p="Prefabs BLUE" t="Include" />
+              <e p="Prefabs RED" t="Include" />
+            </e>
+            <e p="Textures" t="Include" />
+          </e>
+        </e>
+        <e p="Cartoon_Texture_Pack" t="Include">
+          <e p="_MaterialLibrary" t="Include">
+            <e p="Materials" t="Include" />
+          </e>
+          <e p="DIRT" t="Include">
+            <e p="Dirt_Path" t="Include">
+              <e p="Materials" t="Include" />
+              <e p="Textures" t="Include" />
+            </e>
+          </e>
+          <e p="GRASS" t="Include">
+            <e p="GRASS_Dense" t="Include">
+              <e p="GRASS_Dense_Tint_01" t="Include">
+                <e p="Materials" t="Include" />
+                <e p="Textures" t="Include" />
+              </e>
+              <e p="GRASS_Dense_Tint_02" t="Include">
+                <e p="Materials" t="Include" />
+                <e p="Textures" t="Include" />
+              </e>
+            </e>
+            <e p="GRASS_Flower" t="Include">
+              <e p="GRASS_Flower_Tint_01" t="Include">
+                <e p="Material" t="Include" />
+                <e p="Texture" t="Include" />
+              </e>
+              <e p="GRASS_Flower_Tint_02" t="Include">
+                <e p="Material" t="Include" />
+                <e p="Texture" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="ROCKS" t="Include">
+            <e p="ROCKS_Cliff" t="Include">
+              <e p="Materials" t="Include" />
+              <e p="Textures" t="Include" />
+            </e>
+            <e p="ROCKS_Volcanic" t="Include">
+              <e p="Materials" t="Include" />
+              <e p="Textures" t="Include" />
+            </e>
+          </e>
+          <e p="ROOF" t="Include">
+            <e p="ROOF_Hay" t="Include">
+              <e p="Materials" t="Include" />
+              <e p="Textures" t="Include" />
+            </e>
+            <e p="ROOF_RoundTile_Bump" t="Include">
+              <e p="Materials" t="Include" />
+              <e p="Textures" t="Include" />
+            </e>
+            <e p="ROOF_RoundTile_Flat" t="Include">
+              <e p="Materials" t="Include" />
+              <e p="Textures" t="Include" />
+            </e>
+            <e p="ROOF_SquareTile_Bump" t="Include">
+              <e p="Materials" t="Include" />
+              <e p="Textures" t="Include" />
+            </e>
+            <e p="ROOF_SquareTile_Flat" t="Include">
+              <e p="Materials" t="Include" />
+              <e p="Textures" t="Include" />
+            </e>
+          </e>
+          <e p="SAND" t="Include">
+            <e p="SAND_Beach" t="Include">
+              <e p="Materials" t="Include" />
+              <e p="Textures" t="Include" />
+            </e>
+            <e p="SAND_Underwater" t="Include">
+              <e p="Materials" t="Include" />
+              <e p="Textures" t="Include" />
+            </e>
+          </e>
+          <e p="WALLS" t="Include">
+            <e p="WALL_Bricks" t="Include">
+              <e p="Materials" t="Include" />
+              <e p="Textures" t="Include" />
+            </e>
+            <e p="WALL_Stone" t="Include">
+              <e p="Materials" t="Include" />
+              <e p="Textures" t="Include" />
+            </e>
+          </e>
+          <e p="WOOD" t="Include">
+            <e p="WOOD_Plain" t="Include">
+              <e p="Materials" t="Include" />
+              <e p="Textures" t="Include" />
+            </e>
+            <e p="WOOD_Planks" t="Include">
+              <e p="Materials" t="Include" />
+              <e p="Textures" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="CubexCube - Free City Pack I" t="Include">
+          <e p="Materials" t="Include" />
+          <e p="Models" t="Include">
+            <e p="Billboards" t="Include" />
+            <e p="Building" t="Include" />
+            <e p="Cars" t="Include" />
+            <e p="Props_Road" t="Include" />
+            <e p="Props_Street" t="Include" />
+            <e p="Roads" t="Include" />
+          </e>
+          <e p="Prefabs" t="Include">
+            <e p="Billboards" t="Include" />
+            <e p="Building" t="Include" />
+            <e p="Cars" t="Include" />
+            <e p="Props_Road" t="Include" />
+            <e p="Props_Street" t="Include" />
+            <e p="Roads" t="Include" />
+          </e>
+          <e p="Scenes" t="Include">
+            <e p="City_Scene_Free1" t="Include" />
+          </e>
+          <e p="Textures" t="Include" />
+        </e>
+        <e p="Downtown Game Studio" t="Include">
+          <e p="HYPERCASUAL - Simple Female &amp; Male Characters" t="Include">
+            <e p="Materials" t="Include">
+              <e p="Female" t="Include" />
+              <e p="Male" t="Include" />
+            </e>
+            <e p="Models" t="Include" />
+            <e p="Prefabs" t="Include" />
+            <e p="Scenes" t="Include">
+              <e p="SampleScene" t="Include" />
+              <e p="SampleScene_Profiles" t="Include" />
+            </e>
+            <e p="Textures" t="Include">
+              <e p="Female" t="Include" />
+              <e p="Male" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Factory" t="Include">
+          <e p="4h2b12jyk0qo-Building1" t="Include" />
+          <e p="uploads_files_3994959_Factory+model" t="Include">
+            <e p="Factory model" t="Include" />
+          </e>
+        </e>
+        <e p="FarlandSkies" t="Include">
+          <e p="Demo" t="Include">
+            <e p="Materials" t="Include" />
+            <e p="Models" t="Include" />
+            <e p="Textures" t="Include" />
+          </e>
+          <e p="Skyboxes" t="Include">
+            <e p="CloudyCrown_01_Midday" t="Include">
+              <e p="Textures" t="Include" />
+            </e>
+            <e p="CloudyCrown_02_Evening" t="Include">
+              <e p="Textures" t="Include" />
+            </e>
+            <e p="CloudyCrown_03_Midnight" t="Include">
+              <e p="Textures" t="Include" />
+            </e>
+            <e p="CloudyCrown_04_Sunset" t="Include">
+              <e p="Textures" t="Include" />
+            </e>
+            <e p="CloudyCrown_05_Daybreak" t="Include">
+              <e p="Textures" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="LowPolyEnviroPack_LITE_builtIn" t="Include">
+          <e p="BeachArea_Set1" t="Include">
+            <e p="Materials" t="Include" />
+            <e p="Model" t="Include" />
+            <e p="Prefabs" t="Include" />
+            <e p="Scenes" t="Include" />
+            <e p="Textures" t="Include" />
+          </e>
+          <e p="BlocksAndTrees" t="Include">
+            <e p="Materials" t="Include">
+              <e p="BlocksAndTrees" t="Include" />
+            </e>
+            <e p="Meshes" t="Include" />
+            <e p="Prefabs" t="Include" />
+            <e p="Scenes" t="Include" />
+            <e p="Textures" t="Include" />
+          </e>
+        </e>
+        <e p="Material" t="Include">
+          <e p="Block" t="Include" />
+          <e p="Player" t="Include" />
+        </e>
+        <e p="Prefabs" t="Include">
+          <e p="Block" t="Include">
+            <e p="ForBlock" t="Include" />
+          </e>
+          <e p="Menu" t="Include" />
+          <e p="Resources" t="Include" />
+        </e>
+        <e p="Scenes" t="Include">
+          <e p="SampleScene" t="Include" />
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="BlockState.cs" t="Include" />
+          <e p="BlockUi.cs" t="Include" />
+          <e p="Components" t="Include">
+            <e p="CameraFollowComponent.cs" t="Include" />
+            <e p="ExitSceneComponent.cs" t="Include" />
+            <e p="MenuAnimationController.cs" t="Include" />
+            <e p="OnCollisionComponent.cs" t="Include" />
+            <e p="OnTriggerComponent.cs" t="Include" />
+          </e>
+          <e p="Controller" t="Include">
+            <e p="HeroReader.cs" t="Include" />
+            <e p="InputSystem" t="Include" />
+            <e p="MeeseeksController.cs" t="Include" />
+            <e p="PlayerController.cs" t="Include" />
+            <e p="RewardController.cs" t="Include" />
+          </e>
+          <e p="CoolDown.cs" t="Include" />
+          <e p="DragAndDrop" t="Include">
+            <e p="UIitem.cs" t="Include" />
+            <e p="UIslot.cs" t="Include" />
+          </e>
+          <e p="GameManager" t="Include">
+            <e p="StarsController.cs" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="ResourcesData.cs" t="Include" />
+            <e p="ResourcesGive.cs" t="Include" />
+            <e p="ResourcesTake.cs" t="Include" />
+          </e>
+          <e p="Saver" t="Include">
+            <e p="BinaryServisSaver.cs" t="Include" />
+            <e p="IServisSaver.cs" t="Include" />
+            <e p="JsonServisRealize.cs" t="Include" />
+            <e p="SaveManager.cs" t="Include" />
+            <e p="UnityCloudServisController.cs" t="Include" />
+          </e>
+          <e p="SpawnerResources.cs" t="Include" />
+          <e p="SpawnParticles.cs" t="Include" />
+          <e p="UI" t="Include">
+            <e p="TimerController.cs" t="Include" />
+            <e p="UIFactory.cs" t="Include" />
+            <e p="UIGameManager.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Sprite" t="Include">
+          <e p="GameDragAndDrop" t="Include">
+            <e p="MissicsHead" t="Include" />
+          </e>
+        </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Documentation" t="Include" />
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="Fonts &amp; Materials" t="Include" />
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+            <e p="Sprite Assets" t="Include" />
+            <e p="Style Sheets" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+            <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+            <e p="TMP_Bitmap.shader" t="Include" />
+            <e p="TMP_SDF Overlay.shader" t="Include" />
+            <e p="TMP_SDF SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+            <e p="TMP_SDF-Mobile SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface.shader" t="Include" />
+            <e p="TMP_SDF.shader" t="Include" />
+            <e p="TMP_Sprite.shader" t="Include" />
+            <e p="TMPro.cginc" t="Include" />
+            <e p="TMPro_Mobile.cginc" t="Include" />
+            <e p="TMPro_Properties.cginc" t="Include" />
+            <e p="TMPro_Surface.cginc" t="Include" />
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+            <e p="EmojiOne.json" t="Include" />
+          </e>
+        </e>
+        <e p="ToyBox" t="Include">
+          <e p="Models" t="Include">
+            <e p="Materials" t="Include">
+              <e p="Materials" t="Include" />
+              <e p="Textures" t="Include" />
+            </e>
+          </e>
+          <e p="Prefabs" t="Include">
+            <e p="Blocks" t="Include">
+              <e p="BasicBlock" t="Include" />
+              <e p="Big" t="Include" />
+              <e p="Octagon" t="Include" />
+              <e p="Rectangles" t="Include" />
+            </e>
+            <e p="Moving" t="Include" />
+            <e p="Props" t="Include" />
+          </e>
+          <e p="Textures" t="Include" />
+        </e>
+      </e>
+      <e p="GardenGame.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
