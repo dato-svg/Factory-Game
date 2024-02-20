@@ -42,6 +42,7 @@ namespace Resources
         public void StopAllCaroutine()
         {
             _continueCoroutine = false;
+            _player.TakePhone(false);
             StopAllCoroutines();
             StartCoroutine(ReloadPhoneResources());
         }
@@ -89,6 +90,7 @@ namespace Resources
         public void StopAllCaroutineComp()
         {
             _continueCoroutine = false;
+            _player.TakePhone(false);
             StopAllCoroutines();
             StartCoroutine(ReloadCompResources());
         }
@@ -138,6 +140,7 @@ namespace Resources
         public void StopAllCaroutineTV()
         {
             _continueCoroutine = false;
+            _player.TakePhone(false);
             StopAllCoroutines();
             StartCoroutine(ReloadTVResources());
         }

@@ -10,11 +10,12 @@ public class BlockUi : MonoBehaviour
     [SerializeField] private UnityEvent onBuy;
     private SaveManager _saveManager;
     private TextMeshProUGUI _priceText;
-    
+    private GameObject blockbuiSound;
     
 
     private void Awake()
-    {
+    {    
+        blockbuiSound = GameObject.Find("BlockBuiSound");
         _saveManager = FindObjectOfType<SaveManager>();
         _priceText = GetComponent<TextMeshProUGUI>();
         ShowPrice();
@@ -32,6 +33,7 @@ public class BlockUi : MonoBehaviour
                 Debug.Log("YOU BUY");
                 onBuy?.Invoke();
                 _saveManager.SaveAll();
+                blockbuiSound.GetComponent<AudioSource>().Play();
             }
     }
 

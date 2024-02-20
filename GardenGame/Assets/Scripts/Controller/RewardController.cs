@@ -9,7 +9,7 @@ namespace Controller
     {
         [SerializeField] private GameObject _target;
         private Animator _animator;
-        private float _timeDelay= 5;
+        private float _timeDelay= 150f;
         
         private void Start()
         {    

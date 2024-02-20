@@ -18,7 +18,7 @@ namespace Controller
          {
             Vector2 move = value.ReadValue<Vector2>();
             _playerController.OnDirection(move);
-
+            _playerController.TakePhone(false);
             _playerController.SetWalkingAnimation(move != Vector2.zero);
          }
     
