@@ -378,6 +378,7 @@
 "Assets/Scripts/CoolDown.cs"
 "Assets/Scripts/DragAndDrop/UIItem.cs"
 "Assets/Scripts/DragAndDrop/UISlot.cs"
+"Assets/Scripts/GameManager/SoundManager.cs"
 "Assets/Scripts/GameManager/StarsController.cs"
 "Assets/Scripts/Resources/ResourcesData.cs"
 "Assets/Scripts/Resources/ResourcesGive.cs"

@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\SpawnerResources.cs" />
      <Compile Include="Assets\Scripts\BlockState.cs" />
      <Compile Include="Assets\Scripts\Components\OnCollisionComponent.cs" />
+     <Compile Include="Assets\Scripts\GameManager\SoundManager.cs" />
      <Compile Include="Assets\Scripts\Controller\MeeseeksController.cs" />
      <Compile Include="Assets\Scripts\DragAndDrop\UISlot.cs" />
      <Compile Include="Assets\Scripts\Saver\IServisSaver.cs" />
@@ -104,9 +105,9 @@
      <Folder Include="Assets\#OnePotatoKingdom_FULL\Models\#Planets\Tundra\Tundra_Design1" />
      <Folder Include="Assets\#OnePotatoKingdom_FULL\Materials\Materials\Earth_Like\Earth-Like_Designs2" />
      <Folder Include="Assets\TextMesh Pro\Resources\Sprite Assets" />
+     <Folder Include="Assets\Audio\BackGroundMusic" />
      <Folder Include="Assets\Sprite\GameDragAndDrop\MissicsHead" />
      <Folder Include="Assets\FarlandSkies\Skyboxes" />
-     <Folder Include="Assets\Cartoon_Texture_Pack\_MaterialLibrary\Materials" />
      <Folder Include="Assets\#OnePotatoKingdom_FULL\Materials\Materials\Earth_Like\Earth-Like_Designs9" />
      <Folder Include="Assets\Cartoon_Texture_Pack\ROOF\ROOF_Hay\Materials" />
      <Folder Include="Assets\#OnePotatoKingdom_FULL\Materials\Materials\Alien\Alien_Designs1" />

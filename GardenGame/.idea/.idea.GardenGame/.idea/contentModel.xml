@@ -135,7 +135,9 @@
           <e p="PlayerAnimation" t="Include" />
           <e p="RewardAnim" t="Include" />
         </e>
-        <e p="Audio" t="Include" />
+        <e p="Audio" t="Include">
+          <e p="BackGroundMusic" t="Include" />
+        </e>
         <e p="AurynSky" t="Include">
           <e p="Desert Pack" t="Include">
             <e p="Materials" t="Include" />
@@ -145,9 +147,7 @@
           </e>
         </e>
         <e p="Cartoon_Texture_Pack" t="Include">
-          <e p="_MaterialLibrary" t="Include">
-            <e p="Materials" t="Include" />
-          </e>
+          <e p="_MaterialLibrary" t="Include" />
           <e p="DIRT" t="Include">
             <e p="Dirt_Path" t="Include">
               <e p="Materials" t="Include" />
@@ -313,6 +313,7 @@
             <e p="UIslot.cs" t="Include" />
           </e>
           <e p="GameManager" t="Include">
+            <e p="SoundManager.cs" t="Include" />
             <e p="StarsController.cs" t="Include" />
           </e>
           <e p="Resources" t="Include">
