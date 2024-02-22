@@ -136,6 +136,7 @@
           <e p="PlayerAnimation" t="Include" />
           <e p="RewardAnim" t="Include" />
         </e>
+        <e p="Atlasses" t="Include" />
         <e p="Audio" t="Include">
           <e p="BackGroundMusic" t="Include" />
         </e>
@@ -290,6 +291,7 @@
         </e>
         <e p="Scenes" t="Include">
           <e p="SampleScene" t="Include" />
+          <e p="Test.cs" t="Include" />
         </e>
         <e p="Scripts" t="Include">
           <e p="BlockState.cs" t="Include" />

@@ -1,5 +1,4 @@
-using System;
-using Saver;
+using Resources;
 using TMPro;
 using UnityEngine;
 
@@ -9,9 +8,7 @@ namespace UI
     {
         [SerializeField] private TextMeshProUGUI updatePriceTxt;
         [SerializeField] private int updatePrice;
-        [SerializeField] private UIFactoryData _uiFactoryData;
-        
-        private IServisSaver _servisSaver;
+
         private  string Key;
         public int UpdatePrice
         {
@@ -20,41 +17,29 @@ namespace UI
         }
 
 
-        private void Start()
+        
+        private async void Start()
         {
             Key = gameObject.name;
-            _servisSaver = new JsonServisRealize(); // TODO - CHANGE SAVER LOAD SYSTEM
-           
-            if (_servisSaver.HasData(Key))
-            {
-                LoadData();
-            }
-            
-            
+            var price = UpdatePrice;
+            ResourcesData.LoadResources(Key,ref price);
         }
 
+        
         private void SaveData()
         {
-            _uiFactoryData.UpdatePrice = UpdatePrice;
-            _servisSaver.Save(Key, _uiFactoryData);
+            ResourcesData.SaveResources(Key,UpdatePrice);
         }
 
-        private void LoadData()
-        {
-            _servisSaver.Load<UIFactoryData>(Key,Loader);  // TODO - CHANGE SAVER LOAD SYSTEM
-        }
-
-        private void Loader(UIFactoryData uiFactory)
-        {
-            this.UpdatePrice = uiFactory.UpdatePrice;
-        }
+        
+        
 
         public void ShowPrice()
         {
             updatePriceTxt.text = UpdatePrice.ToString();
         }
 
-        private void FixedUpdate()
+        private void LateUpdate()
         {
             ShowPrice();
             SaveData();
@@ -62,10 +47,5 @@ namespace UI
         }
         
     }
-
-    [Serializable]
-    public class UIFactoryData
-    {
-        public int UpdatePrice;
-    }
 }
+

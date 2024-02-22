@@ -7,18 +7,13 @@ namespace Saver
     public class SaveManager : MonoBehaviour
     {
         [SerializeField] private BlockState[] blockStates;
-        [SerializeField]  private ResourcesDataModel resourcesModel;
         private const float AutoSaveInterval = 60f;
         private const  string KEY = "Resources";
         
         
-        private void Start()
+        private async void Start()
         {
-            if (ResourcesData.HasLoad(KEY))
-            {
-                ResourcesData.LoadResources<ResourcesDataModel>(KEY,LoadData); //TODO - CHANGE LOAD SYSTEM
-            }
-           
+            LoadData();
             FindBlockStates();
             StartCoroutine(AutoSaver());
         }
@@ -60,28 +55,27 @@ namespace Saver
 
         private void SaveData()
         {
-            resourcesModel.PhoneCount =  ResourcesData.PhoneCount;
-            resourcesModel.MoneyCount = ResourcesData.MoneyCount;
-            resourcesModel.CompCount = ResourcesData.CompCount;
-            resourcesModel.TVCount = ResourcesData.TVCount;
-            resourcesModel.PhoneBuffer = ResourcesData.PhoneBuffer;
-            resourcesModel.CompBuffer = ResourcesData.CompBuffer;
-            resourcesModel.TVBuffer = ResourcesData.TVBuffer;
-            ResourcesData.SaveResources(KEY,resourcesModel); //TODO - CHANGE SAVER SYSTEM
+            ResourcesData.SaveResources(KEY+"MoneyCount",ResourcesData.MoneyCount);
+            ResourcesData.SaveResources(KEY+"PhoneCount",ResourcesData.PhoneCount);
+            ResourcesData.SaveResources(KEY+"CompCount",ResourcesData.CompCount);
+            ResourcesData.SaveResources(KEY+"TVCount",ResourcesData.TVCount);
+            ResourcesData.SaveResources(KEY+"PhoneBuffer",ResourcesData.PhoneBuffer);
+            ResourcesData.SaveResources(KEY+"CompBuffer",ResourcesData.CompBuffer);
+            ResourcesData.SaveResources(KEY+"TVBuffer",ResourcesData.TVBuffer);
         }
 
-        private void LoadData(ResourcesDataModel resourcesDataModel)
+        private void LoadData()
         {
-            ResourcesData.PhoneCount = resourcesDataModel.PhoneCount;
-            ResourcesData.MoneyCount = resourcesDataModel.MoneyCount;
-            ResourcesData.CompCount = resourcesDataModel.CompCount;
-            ResourcesData.TVCount = resourcesDataModel.TVCount;
-            ResourcesData.PhoneBuffer = resourcesDataModel.PhoneBuffer;
-            ResourcesData.CompBuffer = resourcesDataModel.CompBuffer;
-            ResourcesData.TVBuffer = resourcesDataModel.TVBuffer;
+            ResourcesData.LoadResources(KEY+"MoneyCount",ref ResourcesData.MoneyCount);
+            ResourcesData.LoadResources(KEY+"PhoneCount",ref ResourcesData.PhoneCount);
+            ResourcesData.LoadResources(KEY+"CompCount",ref ResourcesData.CompCount);
+            ResourcesData.LoadResources(KEY+"TVCount",ref ResourcesData.TVCount);
+            ResourcesData.LoadResources(KEY+"PhoneBuffer",ref ResourcesData.PhoneBuffer);
+            ResourcesData.LoadResources(KEY+"CompBuffer",ref ResourcesData.CompBuffer);
+            ResourcesData.LoadResources(KEY+"TVBuffer",ref ResourcesData.TVBuffer);
         }
 
-        private void Update()
+        private void LateUpdate()
         {
             SaveData();
         }
