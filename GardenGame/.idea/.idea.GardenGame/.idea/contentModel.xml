@@ -292,6 +292,7 @@
         <e p="Scenes" t="Include">
           <e p="Logo" t="Include">
             <e p="ForLogo" t="Include">
+              <e p="ForLogo" t="Include" />
               <e p="NewScene.cs" t="Include" />
             </e>
           </e>

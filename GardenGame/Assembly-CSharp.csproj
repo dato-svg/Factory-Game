@@ -229,6 +229,7 @@
      <Folder Include="Assets\ToyBox\Models" />
      <Folder Include="Assets\CubexCube - Free City Pack I\Prefabs" />
      <Folder Include="Assets\LowPolyEnviroPack_LITE_builtIn\BeachArea_Set1\Materials" />
+     <Folder Include="Assets\Scenes\Logo\ForLogo\ForLogo" />
      <Folder Include="Assets\LowPolyEnviroPack_LITE_builtIn\BlocksAndTrees\Materials\BlocksAndTrees" />
      <Folder Include="Assets\Cartoon_Texture_Pack\WALLS\WALL_Bricks\Materials" />
      <Folder Include="Assets\#OnePotatoKingdom_FULL\Materials\Materials\Desert\Desert_Design5" />

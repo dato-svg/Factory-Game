@@ -36,7 +36,7 @@ public class NewScene : MonoBehaviour
         }
 
         yield return new WaitForSeconds(0.5f);
-        SceneManager.LoadScene("LogoScene");
+        SceneManager.LoadScene("MainScene");
     }
     
     
