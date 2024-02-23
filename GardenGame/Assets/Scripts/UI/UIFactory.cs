@@ -21,8 +21,10 @@ namespace UI
         private async void Start()
         {
             Key = gameObject.name;
-            var price = UpdatePrice;
-            ResourcesData.LoadResources(Key,ref price);
+            int tempUpdatePrice = UpdatePrice; 
+            ResourcesData.LoadResources(Key, ref tempUpdatePrice); 
+            UpdatePrice = tempUpdatePrice;
+            
         }
 
         
