@@ -11,11 +11,12 @@ namespace Saver
         private const  string KEY = "Resources";
         
         
-        private async void Start()
+        private  void Start()
         {
+           
             LoadData();
             FindBlockStates();
-            StartCoroutine(AutoSaver());
+            
         }
 
         private void FindBlockStates()
@@ -27,15 +28,7 @@ namespace Saver
             }
         }
 
-        private IEnumerator AutoSaver()
-        {
-            while (true)
-            {
-                yield return new WaitForSeconds(AutoSaveInterval);
-                SaveAll();
-            }
-            
-        }
+        
 
         public void SaveAll()
         {
@@ -55,25 +48,26 @@ namespace Saver
 
         private void SaveData()
         {
-            ResourcesData.SaveResources(KEY+"MoneyCount",ResourcesData.MoneyCount);
-            ResourcesData.SaveResources(KEY+"PhoneCount",ResourcesData.PhoneCount);
-            ResourcesData.SaveResources(KEY+"CompCount",ResourcesData.CompCount);
-            ResourcesData.SaveResources(KEY+"TVCount",ResourcesData.TVCount);
-            ResourcesData.SaveResources(KEY+"PhoneBuffer",ResourcesData.PhoneBuffer);
-            ResourcesData.SaveResources(KEY+"CompBuffer",ResourcesData.CompBuffer);
-            ResourcesData.SaveResources(KEY+"TVBuffer",ResourcesData.TVBuffer);
+            ResourcesData.SaveResources(KEY+"MoneyCount2",ResourcesData.MoneyCount);
+            ResourcesData.SaveResources(KEY+"PhoneCount2",ResourcesData.PhoneCount);
+            ResourcesData.SaveResources(KEY+"CompCount2",ResourcesData.CompCount);
+            ResourcesData.SaveResources(KEY+"TVCount2",ResourcesData.TVCount);
+            ResourcesData.SaveResources(KEY+"PhoneBuffer2",ResourcesData.PhoneBuffer);
+            ResourcesData.SaveResources(KEY+"CompBuffer2",ResourcesData.CompBuffer);
+            ResourcesData.SaveResources(KEY+"TVBuffer2",ResourcesData.TVBuffer);
         }
 
         private void LoadData()
         {
-            ResourcesData.LoadResources(KEY+"MoneyCount",ref ResourcesData.MoneyCount);
-            ResourcesData.LoadResources(KEY+"PhoneCount",ref ResourcesData.PhoneCount);
-            ResourcesData.LoadResources(KEY+"CompCount",ref ResourcesData.CompCount);
-            ResourcesData.LoadResources(KEY+"TVCount",ref ResourcesData.TVCount);
-            ResourcesData.LoadResources(KEY+"PhoneBuffer",ref ResourcesData.PhoneBuffer);
-            ResourcesData.LoadResources(KEY+"CompBuffer",ref ResourcesData.CompBuffer);
-            ResourcesData.LoadResources(KEY+"TVBuffer",ref ResourcesData.TVBuffer);
+            ResourcesData.LoadResources(KEY + "MoneyCount2", ref ResourcesData.MoneyCount);
+            ResourcesData.LoadResources(KEY + "PhoneCount2", ref ResourcesData.PhoneCount);
+            ResourcesData.LoadResources(KEY + "CompCount2", ref ResourcesData.CompCount);
+            ResourcesData.LoadResources(KEY + "TVCount2", ref ResourcesData.TVCount);
+            ResourcesData.LoadResourcesDefault(KEY + "PhoneBuffer2", ref ResourcesData.PhoneBuffer);
+            ResourcesData.LoadResourcesDefault(KEY + "CompBuffer2", ref ResourcesData.CompBuffer);
+            ResourcesData.LoadResourcesDefault(KEY + "TVBuffer2", ref ResourcesData.TVBuffer);
         }
+
 
         private void LateUpdate()
         {

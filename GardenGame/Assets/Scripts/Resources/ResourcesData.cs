@@ -7,7 +7,7 @@ namespace Resources
     public static class ResourcesData
     {
         public static int PhoneCount;
-        public static int MoneyCount = 20000;
+        public static int MoneyCount = 30000;
         public static int CompCount;
         public static int TVCount;
 
@@ -33,6 +33,12 @@ namespace Resources
                 data = PlayerPrefs.GetInt(key); 
             }
           
+        }
+        
+        
+        public static void LoadResourcesDefault(string key,ref int data)
+        {
+            data = PlayerPrefs.GetInt(key,1);
         }
 
       

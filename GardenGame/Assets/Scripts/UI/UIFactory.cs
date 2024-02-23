@@ -18,19 +18,18 @@ namespace UI
 
 
         
-        private async void Start()
+        private  void Start()
         {
+            updatePrice = 100;
             Key = gameObject.name;
-            int tempUpdatePrice = UpdatePrice; 
-            ResourcesData.LoadResources(Key, ref tempUpdatePrice); 
-            UpdatePrice = tempUpdatePrice;
-            
+            ResourcesData.LoadResources(Key+"2", ref updatePrice);
+
         }
 
         
         private void SaveData()
         {
-            ResourcesData.SaveResources(Key,UpdatePrice);
+            ResourcesData.SaveResources(Key+"2",updatePrice);
         }
 
         
@@ -38,7 +37,7 @@ namespace UI
 
         public void ShowPrice()
         {
-            updatePriceTxt.text = UpdatePrice.ToString();
+            updatePriceTxt.text = updatePrice.ToString();
         }
 
         private void LateUpdate()
