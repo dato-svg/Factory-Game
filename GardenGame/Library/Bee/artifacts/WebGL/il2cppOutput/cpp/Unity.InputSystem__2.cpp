@@ -8730,7 +8730,7 @@ CATCH_0598_2:
 						Type_t* L_257;
 						L_257 = Exception_GetType_mAD1230385BDC06119C339187CC37F22B6A79CF09(L_256, NULL);
 						String_t* L_258;
-						L_258 = VirtualFuncInvoker0< String_t* >::Invoke(7, L_257);
+						L_258 = VirtualFuncInvoker0< String_t* >::Invoke(8, L_257);
 						InputBinding_t0D75BD1538CF81D29450D568D5C938E111633EC5* L_259 = V_30;
 						InputBinding_t0D75BD1538CF81D29450D568D5C938E111633EC5 L_260 = (*(InputBinding_t0D75BD1538CF81D29450D568D5C938E111633EC5*)L_259);
 						InputBinding_t0D75BD1538CF81D29450D568D5C938E111633EC5 L_261 = L_260;
@@ -9288,7 +9288,7 @@ IL_0043:
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_15 = L_14;
 		Type_t* L_16 = V_1;
 		String_t* L_17;
-		L_17 = VirtualFuncInvoker0< String_t* >::Invoke(7, L_16);
+		L_17 = VirtualFuncInvoker0< String_t* >::Invoke(8, L_16);
 		(L_15)->SetAtUnchecked(static_cast<il2cpp_array_size_t>(1), (String_t*)L_17);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_18 = L_15;
 		(L_18)->SetAtUnchecked(static_cast<il2cpp_array_size_t>(2), (String_t*)((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral0D24D1F9C2B780184F8AB89F887E73CF3478A74C)));
@@ -9389,7 +9389,7 @@ IL_000d_1:
 				String_t* L_4;
 				L_4 = NamedValue_get_name_m45E9C3490890CE9E140EFCF1A33781E0939A884F_inline((&V_1), NULL);
 				FieldInfo_t* L_5;
-				L_5 = VirtualFuncInvoker2< FieldInfo_t*, String_t*, int32_t >::Invoke(82, L_3, L_4, ((int32_t)53));
+				L_5 = VirtualFuncInvoker2< FieldInfo_t*, String_t*, int32_t >::Invoke(87, L_3, L_4, ((int32_t)53));
 				V_2 = L_5;
 				FieldInfo_t* L_6 = V_2;
 				bool L_7;
@@ -9408,7 +9408,7 @@ IL_000d_1:
 				Type_t* L_12;
 				L_12 = Object_GetType_mE10A8FC1E57F3DF29972CCBC026C2DC3942263B3(L_11, NULL);
 				String_t* L_13;
-				L_13 = VirtualFuncInvoker0< String_t* >::Invoke(7, L_12);
+				L_13 = VirtualFuncInvoker0< String_t* >::Invoke(8, L_12);
 				(L_10)->SetAtUnchecked(static_cast<il2cpp_array_size_t>(1), (String_t*)L_13);
 				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_14 = L_10;
 				(L_14)->SetAtUnchecked(static_cast<il2cpp_array_size_t>(2), (String_t*)_stringLiteral481C61A5280118E098E32A8CA408514C143752F4);
@@ -9439,7 +9439,7 @@ IL_0090_1:
 			{
 				FieldInfo_t* L_25 = V_2;
 				Type_t* L_26;
-				L_26 = VirtualFuncInvoker0< Type_t* >::Invoke(16, L_25);
+				L_26 = VirtualFuncInvoker0< Type_t* >::Invoke(17, L_25);
 				il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
 				int32_t L_27;
 				L_27 = Type_GetTypeCode_m2CE476933AF4B381D7A52F4343B70E9878FDF466(L_26, NULL);
@@ -9534,7 +9534,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t InputBindingResolver_AssignCompositeP
 		Type_t* L_2 = V_0;
 		String_t* L_3 = ___1_name;
 		FieldInfo_t* L_4;
-		L_4 = VirtualFuncInvoker2< FieldInfo_t*, String_t*, int32_t >::Invoke(82, L_2, L_3, ((int32_t)53));
+		L_4 = VirtualFuncInvoker2< FieldInfo_t*, String_t*, int32_t >::Invoke(87, L_2, L_3, ((int32_t)53));
 		V_1 = L_4;
 		FieldInfo_t* L_5 = V_1;
 		bool L_6;
@@ -9559,7 +9559,7 @@ IL_002d:
 	{
 		FieldInfo_t* L_12 = V_1;
 		Type_t* L_13;
-		L_13 = VirtualFuncInvoker0< Type_t* >::Invoke(16, L_12);
+		L_13 = VirtualFuncInvoker0< Type_t* >::Invoke(17, L_12);
 		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_14 = { reinterpret_cast<intptr_t> (Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_0_0_0_var) };
 		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
 		Type_t* L_15;
@@ -9576,7 +9576,7 @@ IL_002d:
 		RuntimeObject* L_18 = ___0_composite;
 		Type_t* L_19 = V_0;
 		String_t* L_20;
-		L_20 = VirtualFuncInvoker0< String_t* >::Invoke(7, L_19);
+		L_20 = VirtualFuncInvoker0< String_t* >::Invoke(8, L_19);
 		String_t* L_21;
 		L_21 = String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral56A75E04CD97B6A418FE40346BF926E16071CF55)), L_17, L_18, L_20, NULL);
 		InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB* L_22 = (InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB_il2cpp_TypeInfo_var)));
@@ -9589,7 +9589,7 @@ IL_005c:
 		FieldInfo_t* L_23 = V_1;
 		RuntimeObject* L_24 = ___0_composite;
 		RuntimeObject* L_25;
-		L_25 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(23, L_23, L_24);
+		L_25 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(26, L_23, L_24);
 		V_2 = ((*(int32_t*)((int32_t*)(int32_t*)UnBox(L_25, Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var))));
 		int32_t L_26 = V_2;
 		if (L_26)
@@ -13300,7 +13300,7 @@ IL_0014:
 	{
 		Type_t* L_5 = ___0_type;
 		String_t* L_6;
-		L_6 = VirtualFuncInvoker0< String_t* >::Invoke(7, L_5);
+		L_6 = VirtualFuncInvoker0< String_t* >::Invoke(8, L_5);
 		___1_name = L_6;
 	}
 
@@ -13771,7 +13771,7 @@ IL_0014:
 	{
 		Type_t* L_5 = ___0_type;
 		String_t* L_6;
-		L_6 = VirtualFuncInvoker0< String_t* >::Invoke(7, L_5);
+		L_6 = VirtualFuncInvoker0< String_t* >::Invoke(8, L_5);
 		___1_name = L_6;
 		String_t* L_7 = ___1_name;
 		bool L_8;
@@ -14637,7 +14637,7 @@ IL_001c_1:
 				Type_t* L_3 = ___0_type;
 				InputDevice_t8BCF67533E872A75779C24C93D1D7085B72D364B* L_4 = V_4;
 				bool L_5;
-				L_5 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(110, L_3, L_4);
+				L_5 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(116, L_3, L_4);
 				if (!L_5)
 				{
 					goto IL_0046_1;
@@ -16134,7 +16134,7 @@ IL_0014:
 	{
 		Type_t* L_5 = ___0_type;
 		String_t* L_6;
-		L_6 = VirtualFuncInvoker0< String_t* >::Invoke(7, L_5);
+		L_6 = VirtualFuncInvoker0< String_t* >::Invoke(8, L_5);
 		___1_name = L_6;
 		String_t* L_7 = ___1_name;
 		bool L_8;
@@ -16269,7 +16269,7 @@ IL_0014:
 	{
 		Type_t* L_5 = ___0_type;
 		String_t* L_6;
-		L_6 = VirtualFuncInvoker0< String_t* >::Invoke(7, L_5);
+		L_6 = VirtualFuncInvoker0< String_t* >::Invoke(8, L_5);
 		___1_name = L_6;
 		String_t* L_7 = ___1_name;
 		bool L_8;
