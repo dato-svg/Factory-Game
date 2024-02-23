@@ -843,11 +843,11 @@
      <Reference Include="Unity.Services.Core.Analytics">
      <HintPath>C:\Users\PRO_TEAM_C#\Desktop\Git-hub\Factory\Factory-Game\GardenGame\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
-     <HintPath>C:\Users\PRO_TEAM_C#\Desktop\Git-hub\Factory\Factory-Game\GardenGame\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.VSCode.Editor">
      <HintPath>C:\Users\PRO_TEAM_C#\Desktop\Git-hub\Factory\Factory-Game\GardenGame\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
+     <HintPath>C:\Users\PRO_TEAM_C#\Desktop\Git-hub\Factory\Factory-Game\GardenGame\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
      </Reference>
      <Reference Include="Unity.MemoryProfiler">
      <HintPath>C:\Users\PRO_TEAM_C#\Desktop\Git-hub\Factory\Factory-Game\GardenGame\Library\ScriptAssemblies\Unity.MemoryProfiler.dll</HintPath>

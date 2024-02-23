@@ -70,6 +70,7 @@
      <Compile Include="Assets\Scripts\SpawnParticles.cs" />
      <Compile Include="Assets\Scripts\Saver\SaveManager.cs" />
      <Compile Include="Assets\YandexGame\ScriptsYG\Language Translation\LangYGAdditionalText.cs" />
+     <Compile Include="Assets\Scenes\Logo\ForLogo\NewScene.cs" />
      <Compile Include="Assets\Scripts\CoolDown.cs" />
      <Compile Include="Assets\Scripts\Controller\PlayerController.cs" />
      <Compile Include="Assets\YandexGame\Example\Scripts\ReceivingPurchaseExample.cs" />
@@ -202,6 +203,7 @@
      <Folder Include="Assets\#OnePotatoKingdom_FULL\Materials\Materials\Desert\Desert_Design4" />
      <Folder Include="Assets\Cartoon_Texture_Pack\ROCKS\ROCKS_Volcanic\Textures" />
      <Folder Include="Assets\WebGLTemplates\PluginYG" />
+     <Folder Include="Assets\Scenes\Logo\ForLogo" />
      <Folder Include="Assets\#OnePotatoKingdom_FULL\Materials\Materials\Frozen" />
      <Folder Include="Assets\Cartoon_Texture_Pack\DIRT" />
      <Folder Include="Assets\LowPolyEnviroPack_LITE_builtIn\BlocksAndTrees\Meshes" />
@@ -294,6 +296,7 @@
      <Folder Include="Assets\YandexGame\Prefabs\Banners" />
      <Folder Include="Assets\Scripts\Resources" />
      <Folder Include="Assets\Cartoon_Texture_Pack\ROCKS\ROCKS_Volcanic" />
+     <Folder Include="Assets\Scenes\Logo" />
      <Folder Include="Assets\ToyBox\Models\Materials\Materials" />
      <Folder Include="Assets\#OnePotatoKingdom_FULL\Models\#Planets\Earth-Like\Earth-Like_Designs7" />
      <Folder Include="Assets\#OnePotatoKingdom_FULL\Models\#Planets\Desert" />
@@ -1115,11 +1118,11 @@
      <Reference Include="Unity.Services.Core.Analytics">
      <HintPath>C:\Users\PRO_TEAM_C#\Desktop\Git-hub\Factory\Factory-Game\GardenGame\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
-     <HintPath>C:\Users\PRO_TEAM_C#\Desktop\Git-hub\Factory\Factory-Game\GardenGame\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.VSCode.Editor">
      <HintPath>C:\Users\PRO_TEAM_C#\Desktop\Git-hub\Factory\Factory-Game\GardenGame\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
+     <HintPath>C:\Users\PRO_TEAM_C#\Desktop\Git-hub\Factory\Factory-Game\GardenGame\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
      </Reference>
      <Reference Include="Unity.MemoryProfiler">
      <HintPath>C:\Users\PRO_TEAM_C#\Desktop\Git-hub\Factory\Factory-Game\GardenGame\Library\ScriptAssemblies\Unity.MemoryProfiler.dll</HintPath>
