@@ -10,6 +10,7 @@ namespace Saver
         private const float AutoSaveInterval = 60f;
         private const  string KEY = "Resources";
 
+        private GameObject education;
         private int FirstSave = 0;
         
         private  void Start()
@@ -18,15 +19,16 @@ namespace Saver
             ResourcesData.PhoneBuffer = 1;
             ResourcesData.CompBuffer = 2;
             ResourcesData.TVBuffer = 3;
-
+            education = GameObject.Find("education");
             FirstSave = PlayerPrefs.GetInt("FistSave",0);
             if (FirstSave == 0)
             {
                 SaveData();
+                education.SetActive(true);
                 
             }
             
-           
+            education.SetActive(false);
             LoadData();
             FindBlockStates();
             
