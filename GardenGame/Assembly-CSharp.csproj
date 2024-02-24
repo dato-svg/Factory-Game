@@ -53,8 +53,8 @@
      <Compile Include="Assets\YandexGame\Example\Scripts\OpenAuthorizationDialog.cs" />
      <Compile Include="Assets\Scripts\Components\OnTriggerComponent.cs" />
      <Compile Include="Assets\YandexGame\ScriptsYG\YandexMetrica\JsonUtils.cs" />
-     <Compile Include="Assets\Scripts\SpawnerResources.cs" />
      <Compile Include="Assets\YandexGame\DebuggingMode\Scripts\DebuggingModeYG.cs" />
+     <Compile Include="Assets\Scripts\SpawnBlock.cs" />
      <Compile Include="Assets\Scripts\BlockState.cs" />
      <Compile Include="Assets\Scripts\Components\OnCollisionComponent.cs" />
      <Compile Include="Assets\YandexGame\ScriptsYG\Payments\PaymentsCatalogYG.cs" />
@@ -82,6 +82,7 @@
      <Compile Include="Assets\YandexGame\Example\Scripts\RewardedAd.cs" />
      <Compile Include="Assets\YandexGame\WorkingData\SavesYG.cs" />
      <Compile Include="Assets\YandexGame\ScriptsYG\ActivityOnAuthorizationYG.cs" />
+     <Compile Include="Assets\Scripts\Controller\CoinManager.cs" />
      <Compile Include="Assets\Scripts\UI\UIGameManager.cs" />
      <Compile Include="Assets\Scripts\Controller\RewardController.cs" />
      <Compile Include="Assets\YandexGame\ScriptsYG\Language Translation\UtilsLang.cs" />
@@ -106,6 +107,7 @@
      <Compile Include="Assets\Scripts\Saver\BinaryServisSaver.cs" />
      <Compile Include="Assets\YandexGame\ScriptsYG\Language Translation\LanguageYG.cs" />
      <Compile Include="Assets\Scripts\Saver\JsonServisRealize.cs" />
+     <Compile Include="Assets\Scripts\Controller\CubeController.cs" />
      <Compile Include="Assets\YandexGame\Example\Scripts\NewResultLBExample.cs" />
      <Compile Include="Assets\YandexGame\ScriptsYG\CustomRBT\BannerYG.cs" />
      <Compile Include="Assets\Scripts\Resources\ResourcesGive.cs" />
@@ -137,6 +139,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <Folder Include="Assets\Material\Player" />
      <Folder Include="Assets\#OnePotatoKingdom_FULL\Models\#Planets\Tundra\Tundra_Design3" />
+     <Folder Include="Assets\Animation\CointAnimation" />
      <Folder Include="Assets\Cartoon_Texture_Pack\WOOD\WOOD_Plain\Textures" />
      <Folder Include="Assets\YandexGame\Example" />
      <Folder Include="Assets\TextMesh Pro\Sprites" />

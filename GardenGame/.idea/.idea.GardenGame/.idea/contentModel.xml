@@ -132,6 +132,7 @@
           </e>
         </e>
         <e p="Animation" t="Include">
+          <e p="CointAnimation" t="Include" />
           <e p="MenuAnimation" t="Include" />
           <e p="PlayerAnimation" t="Include" />
           <e p="RewardAnim" t="Include" />
@@ -309,6 +310,8 @@
             <e p="OnTriggerComponent.cs" t="Include" />
           </e>
           <e p="Controller" t="Include">
+            <e p="CoinManager.cs" t="Include" />
+            <e p="CubeController.cs" t="Include" />
             <e p="HeroReader.cs" t="Include" />
             <e p="InputSystem" t="Include" />
             <e p="MeeseeksController.cs" t="Include" />
@@ -336,7 +339,7 @@
             <e p="SaveManager.cs" t="Include" />
             <e p="UnityCloudServisController.cs" t="Include" />
           </e>
-          <e p="SpawnerResources.cs" t="Include" />
+          <e p="SpawnBlock.cs" t="Include" />
           <e p="SpawnParticles.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="TimerController.cs" t="Include" />

@@ -18,7 +18,7 @@ namespace UI
         private  void Start()
         {
             Key = gameObject.name;
-            FirstSaveStart = PlayerPrefs.GetInt("FirstSaveStart", 0);
+            FirstSaveStart = PlayerPrefs.GetInt(Key +"FirstSaveStart", 0);
             if (FirstSaveStart == 0)
             {
                 UpdatePrice = 100;
@@ -38,7 +38,7 @@ namespace UI
         {
             ResourcesData.SaveResources(Key+"2",UpdatePrice);
             FirstSaveStart = 1;
-            PlayerPrefs.SetInt("FirstSaveStart",FirstSaveStart);
+            PlayerPrefs.SetInt(Key +"FirstSaveStart",FirstSaveStart);
         }
 
         
