@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - Assets.Scripts.GameManager.SoundManager
     - BlockState
     - BlockUi
+    - CoinManager
     - Components.CameraFollowComponent
     - Components.ExitSceneComponent
     - Components.MenuAnimationController
@@ -13,6 +14,7 @@ ScriptsOnlyBuild:
     - Controller.MeeseeksController
     - Controller.PlayerController
     - Controller.RewardController
+    - CubeController
     - DragAndDrop.UIItem
     - DragAndDrop.UISlot
     - GameManager.StarsController
@@ -20,8 +22,8 @@ ScriptsOnlyBuild:
     - Resources.ResourcesGive
     - Resources.ResourcesTake
     - Saver.SaveManager
+    - SpawnBlock
     - SpawnParticles
-    - SpawnerResources
     - UI.TimerController
     - UI.UIFactory
     - UI.UIGameManager
@@ -66,6 +68,7 @@ ScriptsOnlyBuild:
     - Unity.MemoryProfiler.Editor.MemoryProfilerWindow
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.RiderScriptEditorData
+    - Packages.Rider.Editor.RiderScriptEditorPersistedState
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro:
     - TMPro.TMP_FontAsset
@@ -81,8 +84,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -156,12 +161,39 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Navigation
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: Components.ExitSceneComponent
+    methodName: OpenScene
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Collider
+    methodName: set_enabled
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
   - assembly: Assembly-CSharp
-    fullTypeName: Components.ExitSceneComponent
-    methodName: OpenScene
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateIsBuyBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockUi
+    methodName: BuyBlock
+  - assembly: Assembly-CSharp
+    fullTypeName: UI.UIGameManager
+    methodName: ShowResources
+  - assembly: Assembly-CSharp
+    fullTypeName: Resources.ResourcesTake
+    methodName: BuffPhone
   - assembly: Assembly-CSharp
     fullTypeName: Resources.ResourcesGive
     methodName: GiveTVResources
@@ -169,8 +201,53 @@ ScriptsOnlyBuild:
     fullTypeName: UnityEngine.AudioSource
     methodName: Play
   - assembly: Assembly-CSharp
+    fullTypeName: SpawnBlock
+    methodName: StartSpawnCube
+  - assembly: Assembly-CSharp
     fullTypeName: Resources.ResourcesGive
     methodName: StopAllCaroutineTV
+  - assembly: Assembly-CSharp
+    fullTypeName: SpawnBlock
+    methodName: StopSpawnCube
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Collider
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateIsBuyBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockUi
+    methodName: BuyBlock
+  - assembly: Assembly-CSharp
+    fullTypeName: UI.UIGameManager
+    methodName: ShowResources
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -198,33 +275,6 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: UI.UIGameManager
     methodName: ShowResources
-  - assembly: Assembly-CSharp
-    fullTypeName: Resources.ResourcesGive
-    methodName: GivePhoneResources
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: Play
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: Resources.ResourcesGive
-    methodName: StopAllCaroutine
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -288,693 +338,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: Controller.HeroReader
     methodName: OnMove
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.PhysicsModule
-    fullTypeName: UnityEngine.Collider
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateIsBuyBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockUi
-    methodName: BuyBlock
-  - assembly: Assembly-CSharp
-    fullTypeName: UI.UIGameManager
-    methodName: ShowResources
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.PhysicsModule
-    fullTypeName: UnityEngine.Collider
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateIsBuyBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockUi
-    methodName: BuyBlock
-  - assembly: Assembly-CSharp
-    fullTypeName: UI.UIGameManager
-    methodName: ShowResources
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: Resources.ResourcesTake
-    methodName: TakePhoneResources
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.PhysicsModule
-    fullTypeName: UnityEngine.Collider
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateIsBuyBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockUi
-    methodName: BuyBlock
-  - assembly: Assembly-CSharp
-    fullTypeName: UI.UIGameManager
-    methodName: ShowResources
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.PhysicsModule
-    fullTypeName: UnityEngine.Collider
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateIsBuyBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockUi
-    methodName: BuyBlock
-  - assembly: Assembly-CSharp
-    fullTypeName: UI.UIGameManager
-    methodName: ShowResources
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.PhysicsModule
-    fullTypeName: UnityEngine.Collider
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateIsBuyBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockUi
-    methodName: BuyBlock
-  - assembly: Assembly-CSharp
-    fullTypeName: UI.UIGameManager
-    methodName: ShowResources
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.Renderer
-    methodName: set_enabled
-  - assembly: UnityEngine.PhysicsModule
-    fullTypeName: UnityEngine.Collider
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateIsBuyBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockUi
-    methodName: BuyBlock
-  - assembly: Assembly-CSharp
-    fullTypeName: UI.UIGameManager
-    methodName: ShowResources
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.PhysicsModule
-    fullTypeName: UnityEngine.Collider
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateIsBuyBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockUi
-    methodName: BuyBlock
-  - assembly: Assembly-CSharp
-    fullTypeName: UI.UIGameManager
-    methodName: ShowResources
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.PhysicsModule
-    fullTypeName: UnityEngine.Collider
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateIsBuyBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockUi
-    methodName: BuyBlock
-  - assembly: Assembly-CSharp
-    fullTypeName: UI.UIGameManager
-    methodName: ShowResources
-  - assembly: Assembly-CSharp
-    fullTypeName: Resources.ResourcesGive
-    methodName: GivePhoneResources
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: Play
-  - assembly: Assembly-CSharp
-    fullTypeName: Resources.ResourcesGive
-    methodName: StopAllCaroutine
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.PhysicsModule
-    fullTypeName: UnityEngine.Collider
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateIsBuyBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockUi
-    methodName: BuyBlock
-  - assembly: Assembly-CSharp
-    fullTypeName: UI.UIGameManager
-    methodName: ShowResources
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.PhysicsModule
-    fullTypeName: UnityEngine.Collider
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateIsBuyBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockUi
-    methodName: BuyBlock
-  - assembly: Assembly-CSharp
-    fullTypeName: UI.UIGameManager
-    methodName: ShowResources
-  - assembly: Assembly-CSharp
-    fullTypeName: Resources.ResourcesTake
-    methodName: BuffPhone
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.PhysicsModule
-    fullTypeName: UnityEngine.Collider
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateIsBuyBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockUi
-    methodName: BuyBlock
-  - assembly: Assembly-CSharp
-    fullTypeName: UI.UIGameManager
-    methodName: ShowResources
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.PhysicsModule
-    fullTypeName: UnityEngine.Collider
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateIsBuyBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockUi
-    methodName: BuyBlock
-  - assembly: Assembly-CSharp
-    fullTypeName: UI.UIGameManager
-    methodName: ShowResources
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.PhysicsModule
-    fullTypeName: UnityEngine.Collider
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateIsBuyBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockUi
-    methodName: BuyBlock
-  - assembly: Assembly-CSharp
-    fullTypeName: UI.UIGameManager
-    methodName: ShowResources
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.PhysicsModule
-    fullTypeName: UnityEngine.Collider
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateIsBuyBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockUi
-    methodName: BuyBlock
-  - assembly: Assembly-CSharp
-    fullTypeName: UI.UIGameManager
-    methodName: ShowResources
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.PhysicsModule
-    fullTypeName: UnityEngine.Collider
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateIsBuyBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockUi
-    methodName: BuyBlock
-  - assembly: Assembly-CSharp
-    fullTypeName: UI.UIGameManager
-    methodName: ShowResources
-  - assembly: Assembly-CSharp
-    fullTypeName: Resources.ResourcesGive
-    methodName: GiveCompResources
-  - assembly: Assembly-CSharp
-    fullTypeName: Resources.ResourcesGive
-    methodName: StopAllCaroutineComp
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: Play
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.PhysicsModule
-    fullTypeName: UnityEngine.Collider
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateIsBuyBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockUi
-    methodName: BuyBlock
-  - assembly: Assembly-CSharp
-    fullTypeName: UI.UIGameManager
-    methodName: ShowResources
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.PhysicsModule
-    fullTypeName: UnityEngine.Collider
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateIsBuyBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockUi
-    methodName: BuyBlock
-  - assembly: Assembly-CSharp
-    fullTypeName: UI.UIGameManager
-    methodName: ShowResources
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.PhysicsModule
-    fullTypeName: UnityEngine.Collider
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateIsBuyBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockUi
-    methodName: BuyBlock
-  - assembly: Assembly-CSharp
-    fullTypeName: UI.UIGameManager
-    methodName: ShowResources
-  - assembly: Assembly-CSharp
-    fullTypeName: Resources.ResourcesGive
-    methodName: GiveCompResources
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: Play
-  - assembly: Assembly-CSharp
-    fullTypeName: Resources.ResourcesGive
-    methodName: StopAllCaroutineComp
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.PhysicsModule
-    fullTypeName: UnityEngine.Collider
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateIsBuyBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockUi
-    methodName: BuyBlock
-  - assembly: Assembly-CSharp
-    fullTypeName: UI.UIGameManager
-    methodName: ShowResources
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.PhysicsModule
-    fullTypeName: UnityEngine.Collider
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateIsBuyBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockUi
-    methodName: BuyBlock
-  - assembly: Assembly-CSharp
-    fullTypeName: UI.UIGameManager
-    methodName: ShowResources
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: Resources.ResourcesTake
-    methodName: TakeCompResources
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.PhysicsModule
-    fullTypeName: UnityEngine.Collider
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateIsBuyBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockState
-    methodName: ActivateActiveBool
-  - assembly: Assembly-CSharp
-    fullTypeName: BlockUi
-    methodName: BuyBlock
-  - assembly: Assembly-CSharp
-    fullTypeName: UI.UIGameManager
-    methodName: ShowResources
+    methodName: BuffComp
   - assembly: Assembly-CSharp
     fullTypeName: Resources.ResourcesGive
     methodName: GiveTVResources
@@ -982,8 +348,299 @@ ScriptsOnlyBuild:
     fullTypeName: UnityEngine.AudioSource
     methodName: Play
   - assembly: Assembly-CSharp
+    fullTypeName: SpawnBlock
+    methodName: StartSpawnCube
+  - assembly: Assembly-CSharp
     fullTypeName: Resources.ResourcesGive
     methodName: StopAllCaroutineTV
+  - assembly: Assembly-CSharp
+    fullTypeName: SpawnBlock
+    methodName: StopSpawnCube
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Collider
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateIsBuyBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockUi
+    methodName: BuyBlock
+  - assembly: Assembly-CSharp
+    fullTypeName: UI.UIGameManager
+    methodName: ShowResources
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Collider
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateIsBuyBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockUi
+    methodName: BuyBlock
+  - assembly: Assembly-CSharp
+    fullTypeName: UI.UIGameManager
+    methodName: ShowResources
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Collider
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateIsBuyBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockUi
+    methodName: BuyBlock
+  - assembly: Assembly-CSharp
+    fullTypeName: UI.UIGameManager
+    methodName: ShowResources
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Collider
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateIsBuyBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockUi
+    methodName: BuyBlock
+  - assembly: Assembly-CSharp
+    fullTypeName: UI.UIGameManager
+    methodName: ShowResources
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Collider
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateIsBuyBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockUi
+    methodName: BuyBlock
+  - assembly: Assembly-CSharp
+    fullTypeName: UI.UIGameManager
+    methodName: ShowResources
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: Components.ExitSceneComponent
+    methodName: OpenScene
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Collider
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateIsBuyBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockUi
+    methodName: BuyBlock
+  - assembly: Assembly-CSharp
+    fullTypeName: UI.UIGameManager
+    methodName: ShowResources
+  - assembly: Assembly-CSharp
+    fullTypeName: Resources.ResourcesGive
+    methodName: GiveCompResources
+  - assembly: Assembly-CSharp
+    fullTypeName: SpawnBlock
+    methodName: StartSpawnCube
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
+  - assembly: Assembly-CSharp
+    fullTypeName: Resources.ResourcesGive
+    methodName: StopAllCaroutineComp
+  - assembly: Assembly-CSharp
+    fullTypeName: SpawnBlock
+    methodName: StopSpawnCube
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Collider
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateIsBuyBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockUi
+    methodName: BuyBlock
+  - assembly: Assembly-CSharp
+    fullTypeName: UI.UIGameManager
+    methodName: ShowResources
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Collider
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateIsBuyBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockUi
+    methodName: BuyBlock
+  - assembly: Assembly-CSharp
+    fullTypeName: UI.UIGameManager
+    methodName: ShowResources
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Collider
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateIsBuyBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockUi
+    methodName: BuyBlock
+  - assembly: Assembly-CSharp
+    fullTypeName: UI.UIGameManager
+    methodName: ShowResources
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -1020,6 +677,327 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: Resources.ResourcesTake
     methodName: BuffTV
+  - assembly: Assembly-CSharp
+    fullTypeName: Resources.ResourcesGive
+    methodName: GivePhoneResources
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: SpawnBlock
+    methodName: StartSpawnCube
+  - assembly: Assembly-CSharp
+    fullTypeName: Resources.ResourcesGive
+    methodName: StopAllCaroutine
+  - assembly: Assembly-CSharp
+    fullTypeName: SpawnBlock
+    methodName: StopSpawnCube
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: CoinManager
+    methodName: CheckResourcesTVStart
+  - assembly: Assembly-CSharp
+    fullTypeName: Resources.ResourcesTake
+    methodName: TakeTvResources
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: CoinManager
+    methodName: CheckResourcesPhoneStart
+  - assembly: Assembly-CSharp
+    fullTypeName: Resources.ResourcesTake
+    methodName: TakePhoneResources
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
+  - assembly: Assembly-CSharp
+    fullTypeName: Resources.ResourcesGive
+    methodName: GivePhoneResources
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
+  - assembly: Assembly-CSharp
+    fullTypeName: SpawnBlock
+    methodName: StartSpawnCube
+  - assembly: Assembly-CSharp
+    fullTypeName: Resources.ResourcesGive
+    methodName: StopAllCaroutine
+  - assembly: Assembly-CSharp
+    fullTypeName: SpawnBlock
+    methodName: StopSpawnCube
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Collider
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateIsBuyBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockUi
+    methodName: BuyBlock
+  - assembly: Assembly-CSharp
+    fullTypeName: UI.UIGameManager
+    methodName: ShowResources
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Collider
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateIsBuyBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockUi
+    methodName: BuyBlock
+  - assembly: Assembly-CSharp
+    fullTypeName: UI.UIGameManager
+    methodName: ShowResources
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Collider
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateIsBuyBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockUi
+    methodName: BuyBlock
+  - assembly: Assembly-CSharp
+    fullTypeName: UI.UIGameManager
+    methodName: ShowResources
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Collider
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateIsBuyBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockUi
+    methodName: BuyBlock
+  - assembly: Assembly-CSharp
+    fullTypeName: UI.UIGameManager
+    methodName: ShowResources
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Collider
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateIsBuyBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockUi
+    methodName: BuyBlock
+  - assembly: Assembly-CSharp
+    fullTypeName: UI.UIGameManager
+    methodName: ShowResources
+  - assembly: Assembly-CSharp
+    fullTypeName: Resources.ResourcesGive
+    methodName: GiveCompResources
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
+  - assembly: Assembly-CSharp
+    fullTypeName: SpawnBlock
+    methodName: StartSpawnCube
+  - assembly: Assembly-CSharp
+    fullTypeName: Resources.ResourcesGive
+    methodName: StopAllCaroutineComp
+  - assembly: Assembly-CSharp
+    fullTypeName: SpawnBlock
+    methodName: StopSpawnCube
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Collider
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateIsBuyBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockUi
+    methodName: BuyBlock
+  - assembly: Assembly-CSharp
+    fullTypeName: UI.UIGameManager
+    methodName: ShowResources
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Renderer
+    methodName: set_enabled
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Collider
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateIsBuyBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockUi
+    methodName: BuyBlock
+  - assembly: Assembly-CSharp
+    fullTypeName: UI.UIGameManager
+    methodName: ShowResources
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -1062,12 +1040,93 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Collider
+    methodName: set_enabled
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
   - assembly: Assembly-CSharp
-    fullTypeName: Resources.ResourcesTake
-    methodName: TakeTvResources
+    fullTypeName: BlockState
+    methodName: ActivateIsBuyBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockUi
+    methodName: BuyBlock
+  - assembly: Assembly-CSharp
+    fullTypeName: UI.UIGameManager
+    methodName: ShowResources
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Collider
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateIsBuyBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockUi
+    methodName: BuyBlock
+  - assembly: Assembly-CSharp
+    fullTypeName: UI.UIGameManager
+    methodName: ShowResources
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Collider
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateIsBuyBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockState
+    methodName: ActivateActiveBool
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockUi
+    methodName: BuyBlock
+  - assembly: Assembly-CSharp
+    fullTypeName: UI.UIGameManager
+    methodName: ShowResources
+  - assembly: Assembly-CSharp
+    fullTypeName: BlockUi
+    methodName: BuyBlock
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -1128,21 +1187,21 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: UI.UIGameManager
     methodName: ShowResources
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
-    fullTypeName: BlockUi
-    methodName: BuyBlock
-  - assembly: Assembly-CSharp
-    fullTypeName: Components.ExitSceneComponent
-    methodName: OpenScene
+    fullTypeName: CoinManager
+    methodName: CheckResourcesCompStart
   - assembly: Assembly-CSharp
     fullTypeName: Resources.ResourcesTake
-    methodName: BuffComp
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
+    methodName: TakeCompResources
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -1215,6 +1274,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: YG.YandexGame
     methodName: _SwitchLanguage
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: YG.YandexGame
     methodName: _SwitchLanguage
@@ -1224,15 +1286,18 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: Components.ExitSceneComponent
+    methodName: OpenScene
   - assembly: Assembly-CSharp
     fullTypeName: Components.MenuAnimationController
     methodName: CloseWindow
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: PlayOneShot
-  - assembly: Assembly-CSharp
-    fullTypeName: Components.ExitSceneComponent
-    methodName: OpenScene
   - assembly: Assembly-CSharp
     fullTypeName: Resources.ResourcesTake
     methodName: GiveMoney
@@ -1883,6 +1948,12 @@ ScriptsOnlyBuild:
       Script: {instanceID: 27274}
     - Class: 114
       Script: {instanceID: 27438}
+    - Class: 114
+      Script: {instanceID: 92502}
+    - Class: 114
+      Script: {instanceID: 111080}
+    - Class: 114
+      Script: {instanceID: 151894}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -2842,12 +2913,6 @@ ScriptsOnlyBuild:
     className: MeeseeksController
   - hash:
       serializedVersion: 2
-      Hash: e1879292f35a63d5dc8384c387c673c9
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: SpawnerResources
-  - hash:
-      serializedVersion: 2
       Hash: 654cebef8aa88cb6cd0504505364d614
     assemblyName: Unity.InputSystem
     namespaceName: UnityEngine.InputSystem.Editor
@@ -3440,10 +3505,28 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 074e141f721dba5ec3cc476f9573fc4b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SpawnBlock
+  - hash:
+      serializedVersion: 2
+      Hash: c13adf70ec9777b05527d1b32edc4c16
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CubeController
+  - hash:
+      serializedVersion: 2
+      Hash: 7151f192e01ad2fe234c7ac2da3bf76b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CoinManager
   platform: 20
   scenePathNames:
   - Assets/Scenes/LogoScene.unity
   - Assets/Scenes/MainScene.unity
   - Assets/Scenes/Game1.unity
   - Assets/Scenes/Game3.unity
-  playerPath: D:/FactoryGame.1.0.3
+  playerPath: D:/FactoryGame1.0.5
