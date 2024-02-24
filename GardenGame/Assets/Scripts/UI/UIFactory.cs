@@ -7,29 +7,38 @@ namespace UI
     public class UIFactory : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI updatePriceTxt;
-        [SerializeField] private int updatePrice;
+        public int UpdatePrice;
 
+        private int FirstSaveStart = 0;
         private  string Key;
-        public int UpdatePrice
-        {
-            get => updatePrice;
-            set => updatePrice = value;
-        }
+        
 
 
         
         private  void Start()
         {
-            updatePrice = 100;
             Key = gameObject.name;
-            ResourcesData.LoadResources(Key+"2", ref updatePrice);
+            FirstSaveStart = PlayerPrefs.GetInt("FirstSaveStart", 0);
+            if (FirstSaveStart == 0)
+            {
+                UpdatePrice = 100;
+                SaveData();
+            }
+            else
+            {
+                ResourcesData.LoadResources(Key+"2", ref UpdatePrice);
+            }
+           
+          
 
         }
 
         
         private void SaveData()
         {
-            ResourcesData.SaveResources(Key+"2",updatePrice);
+            ResourcesData.SaveResources(Key+"2",UpdatePrice);
+            FirstSaveStart = 1;
+            PlayerPrefs.SetInt("FirstSaveStart",FirstSaveStart);
         }
 
         
@@ -37,7 +46,7 @@ namespace UI
 
         public void ShowPrice()
         {
-            updatePriceTxt.text = updatePrice.ToString();
+            updatePriceTxt.text = UpdatePrice.ToString();
         }
 
         private void LateUpdate()

@@ -24873,7 +24873,7 @@ IL_003d:
 		Type_t* L_10 = V_0;
 		String_t* L_11 = ___1_part;
 		FieldInfo_t* L_12;
-		L_12 = VirtualFuncInvoker2< FieldInfo_t*, String_t*, int32_t >::Invoke(87, L_10, L_11, ((int32_t)21));
+		L_12 = VirtualFuncInvoker2< FieldInfo_t*, String_t*, int32_t >::Invoke(85, L_10, L_11, ((int32_t)21));
 		V_1 = L_12;
 		FieldInfo_t* L_13 = V_1;
 		bool L_14;
@@ -25105,7 +25105,7 @@ IL_004b:
 	{
 		Type_t* L_10 = V_1;
 		FieldInfoU5BU5D_t50D47CBECF1AEB152F555803E3329D9E34DBF8D8* L_11;
-		L_11 = VirtualFuncInvoker1< FieldInfoU5BU5D_t50D47CBECF1AEB152F555803E3329D9E34DBF8D8*, int32_t >::Invoke(88, L_10, ((int32_t)20));
+		L_11 = VirtualFuncInvoker1< FieldInfoU5BU5D_t50D47CBECF1AEB152F555803E3329D9E34DBF8D8*, int32_t >::Invoke(86, L_10, ((int32_t)20));
 		__this->___U3CU3E7__wrap1 = L_11;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E7__wrap1), (void*)L_11);
 		__this->___U3CU3E7__wrap2 = 0;

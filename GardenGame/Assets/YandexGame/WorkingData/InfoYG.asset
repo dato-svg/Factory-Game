@@ -27,9 +27,9 @@ MonoBehaviour:
   fullscreenAdInterval: 60
   durationOfAdSimulation: 0.5
   testErrorOfRewardedAdsInEditor: 0
-  saveCloud: 1
+  saveCloud: 0
   flush: 0
-  localSaveSync: 1
+  localSaveSync: 0
   saveCloudInterval: 5
   saveOnQuitGame: 0
   leaderboardEnable: 1

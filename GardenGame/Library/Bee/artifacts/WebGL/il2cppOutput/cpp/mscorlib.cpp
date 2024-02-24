@@ -21958,7 +21958,7 @@ IL_0034:
 			StreamWriter_t6E7DF7D524AA3C018A65F62EE80779873ED4D1E4* L_7 = L_6;
 			String_t* L_8;
 			L_8 = KeyPairPersistence_ToXml_mC806794E51F1AFCBD05773B5B2B11B1EC54E276E(__this, NULL);
-			VirtualActionInvoker1< String_t* >::Invoke(17, L_7, L_8);
+			VirtualActionInvoker1< String_t* >::Invoke(16, L_7, L_8);
 			VirtualActionInvoker0::Invoke(8, L_7);
 			goto IL_0035;
 		}

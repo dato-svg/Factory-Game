@@ -20,6 +20,7 @@ namespace Controller
         private void Start()
         {
             _saveManager = FindObjectOfType<SaveManager>();
+            _target = GameObject.Find("Momey");
             _target.SetActive(false);
             _animator = GetComponent<Animator>();
             EnableObject();

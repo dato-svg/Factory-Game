@@ -17256,7 +17256,7 @@ IL_0027:
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_22 = L_21;
 		Type_t* L_23 = ___1_type;
 		Type_t* L_24;
-		L_24 = VirtualFuncInvoker0< Type_t* >::Invoke(113, L_23);
+		L_24 = VirtualFuncInvoker0< Type_t* >::Invoke(111, L_23);
 		String_t* L_25;
 		L_25 = VirtualFuncInvoker0< String_t* >::Invoke(8, L_24);
 		(L_22)->SetAtUnchecked(static_cast<il2cpp_array_size_t>(3), (String_t*)L_25);
@@ -17286,7 +17286,7 @@ IL_0094:
 		V_4 = (String_t*)NULL;
 		Type_t* L_37 = ___1_type;
 		Type_t* L_38;
-		L_38 = VirtualFuncInvoker0< Type_t* >::Invoke(113, L_37);
+		L_38 = VirtualFuncInvoker0< Type_t* >::Invoke(111, L_37);
 		V_5 = L_38;
 		goto IL_0127;
 	}
@@ -17363,7 +17363,7 @@ IL_011e:
 	{
 		Type_t* L_49 = V_5;
 		Type_t* L_50;
-		L_50 = VirtualFuncInvoker0< Type_t* >::Invoke(113, L_49);
+		L_50 = VirtualFuncInvoker0< Type_t* >::Invoke(111, L_49);
 		V_5 = L_50;
 	}
 

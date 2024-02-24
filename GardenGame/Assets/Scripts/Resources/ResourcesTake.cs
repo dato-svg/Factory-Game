@@ -10,6 +10,7 @@
             [SerializeField] private UIFactory uiFactory;
             private UIGameManager _uiGameManager;
 
+            
             private void Awake()
             {
                 _uiGameManager = FindObjectOfType<UIGameManager>();
@@ -26,6 +27,7 @@
                     uiFactory.ShowPrice();
                     _uiGameManager.ShowResources();
                     Debug.Log(ResourcesData.PhoneBuffer);
+                    PlayerPrefs.SetInt("UpgradePhone" +"2", uiFactory.UpdatePrice);
                 }
                
             }
@@ -40,6 +42,7 @@
                     uiFactory.ShowPrice();
                     _uiGameManager.ShowResources();
                     Debug.Log(ResourcesData.CompBuffer);
+                    PlayerPrefs.SetInt("UpgradeComp" +"2", uiFactory.UpdatePrice);
                 }
                
             }
@@ -54,6 +57,7 @@
                     uiFactory.ShowPrice();
                     _uiGameManager.ShowResources();
                     Debug.Log(ResourcesData.TVBuffer); 
+                    PlayerPrefs.SetInt("UpgradeTv" +"2", uiFactory.UpdatePrice);
                 }
                 
             }
