@@ -9,10 +9,23 @@ namespace Saver
         [SerializeField] private BlockState[] blockStates;
         private const float AutoSaveInterval = 60f;
         private const  string KEY = "Resources";
-        
+
+        private int FirstSave = 0;
         
         private  void Start()
         {
+            ResourcesData.MoneyCount = 10;
+            ResourcesData.PhoneBuffer = 1;
+            ResourcesData.CompBuffer = 2;
+            ResourcesData.TVBuffer = 3;
+
+            FirstSave = PlayerPrefs.GetInt("FistSave",0);
+            if (FirstSave == 0)
+            {
+                SaveData();
+                
+            }
+            
            
             LoadData();
             FindBlockStates();
@@ -55,6 +68,8 @@ namespace Saver
             ResourcesData.SaveResources(KEY+"PhoneBuffer2",ResourcesData.PhoneBuffer);
             ResourcesData.SaveResources(KEY+"CompBuffer2",ResourcesData.CompBuffer);
             ResourcesData.SaveResources(KEY+"TVBuffer2",ResourcesData.TVBuffer);
+            PlayerPrefs.SetInt("FistSave",FirstSave);
+            FirstSave = 1;
         }
 
         private void LoadData()

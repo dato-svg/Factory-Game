@@ -22,7 +22,7 @@
                 {
                     ResourcesData.MoneyCount -= uiFactory.UpdatePrice;
                     uiFactory.UpdatePrice *= 2;
-                    ResourcesData.PhoneBuffer += 50;
+                    ResourcesData.PhoneBuffer *= 2;
                     uiFactory.ShowPrice();
                     _uiGameManager.ShowResources();
                     Debug.Log(ResourcesData.PhoneBuffer);
@@ -36,7 +36,7 @@
                 {
                     ResourcesData.MoneyCount -= uiFactory.UpdatePrice;
                     uiFactory.UpdatePrice *= 2;
-                    ResourcesData.CompBuffer += 50;
+                    ResourcesData.CompBuffer *=2;
                     uiFactory.ShowPrice();
                     _uiGameManager.ShowResources();
                     Debug.Log(ResourcesData.CompBuffer);
@@ -50,7 +50,7 @@
                 {
                     ResourcesData.MoneyCount -= uiFactory.UpdatePrice;
                     uiFactory.UpdatePrice *= 2;
-                    ResourcesData.TVBuffer += 50;
+                    ResourcesData.TVBuffer *= 2;
                     uiFactory.ShowPrice();
                     _uiGameManager.ShowResources();
                     Debug.Log(ResourcesData.TVBuffer); 
@@ -61,7 +61,7 @@
             
             public void TakePhoneResources()
             {
-                var phoneBuffer = ResourcesData.PhoneCount + ResourcesData.PhoneBuffer;
+                var phoneBuffer = ResourcesData.PhoneCount * ResourcesData.PhoneBuffer;
                 TakeResources( phoneBuffer , ref ResourcesData.PhoneCount);
                 Debug.Log(ResourcesData.PhoneBuffer +"ResourcesData.PhoneBuffer");
             }
@@ -69,13 +69,13 @@
         
             public void TakeCompResources()
             {
-                var compBuffer = ResourcesData.CompCount + ResourcesData.CompBuffer;
+                var compBuffer = ResourcesData.CompCount * ResourcesData.CompBuffer;
                 TakeResources( compBuffer, ref ResourcesData.CompCount);
             }
         
             public void TakeTvResources()
             {
-                var tvBuffer = ResourcesData.TVCount + ResourcesData.TVBuffer;
+                var tvBuffer = ResourcesData.TVCount * ResourcesData.TVBuffer;
                 TakeResources( tvBuffer, ref ResourcesData.TVCount);
             }
 
