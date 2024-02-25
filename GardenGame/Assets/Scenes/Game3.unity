@@ -10120,7 +10120,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 42c14d3115c1a844b98b9ecf5d31cae5, type: 3}
   - {fileID: 8300000, guid: 84a4bf13a08abed4fb448c9a1bf31ca6, type: 3}
   - {fileID: 8300000, guid: 65eab1c8eef47e241b3b0f8ac1842d7e, type: 3}
-  delaySpawn: 2
+  delaySpawn: 1
 --- !u!114 &1903948944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10157,7 +10157,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -11245,6 +11245,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1917507187}
     m_Modifications:
+    - target: {fileID: 650610137937423021, guid: bb16e1cf55bd294449df6eccb5f1ce1e, type: 3}
+      propertyPath: coolDown.timer
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 3674447295748430743, guid: bb16e1cf55bd294449df6eccb5f1ce1e, type: 3}
       propertyPath: m_Name
       value: Timer

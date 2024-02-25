@@ -73,6 +73,7 @@
      <Compile Include="Assets\Scenes\Logo\ForLogo\NewScene.cs" />
      <Compile Include="Assets\Scripts\CoolDown.cs" />
      <Compile Include="Assets\Scripts\Controller\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Components\DestroyComponent.cs" />
      <Compile Include="Assets\YandexGame\Example\Scripts\ReceivingPurchaseExample.cs" />
      <Compile Include="Assets\Scripts\Controller\HeroReader.cs" />
      <Compile Include="Assets\YandexGame\ScriptsYG\Leaderboard\UtilsLB.cs" />
@@ -109,6 +110,7 @@
      <Compile Include="Assets\Scripts\Saver\JsonServisRealize.cs" />
      <Compile Include="Assets\Scripts\Controller\CubeController.cs" />
      <Compile Include="Assets\YandexGame\Example\Scripts\NewResultLBExample.cs" />
+     <Compile Include="Assets\Scripts\GameManager\YGHelper.cs" />
      <Compile Include="Assets\YandexGame\ScriptsYG\CustomRBT\BannerYG.cs" />
      <Compile Include="Assets\Scripts\Resources\ResourcesGive.cs" />
      <Compile Include="Assets\Scripts\BlockUi.cs" />
@@ -118,7 +120,9 @@
      <Folder Include="Assets" />
      <Folder Include="Assets\Cartoon_Texture_Pack\ROOF\ROOF_Hay\Textures" />
      <Folder Include="Assets\LowPolyEnviroPack_LITE_builtIn" />
+     <Folder Include="Assets\SimpleCity\_Prefabs\Buildings" />
      <Folder Include="Assets\Cartoon_Texture_Pack\ROOF\ROOF_SquareTile_Bump" />
+     <Folder Include="Assets\SimpleCity" />
      <Folder Include="Assets\#OnePotatoKingdom_FULL\Models\#Planets\Frozen" />
      <Folder Include="Assets\#OnePotatoKingdom_FULL\Materials\Materials\Frozen\Frozen_Design4" />
      <Folder Include="Assets\Cartoon_Texture_Pack\ROCKS\ROCKS_Volcanic\Materials" />
@@ -161,6 +165,7 @@
      <Folder Include="Assets\#OnePotatoKingdom_FULL\Models\#Planets\Temperate\Temperate_Design3" />
      <Folder Include="Assets\#OnePotatoKingdom_FULL\Models\#Planets\Temperate\Temperate_Design4" />
      <Folder Include="Assets\ToyBox\Models\Materials\Textures" />
+     <Folder Include="Assets\SimpleCity\_Materials" />
      <Folder Include="Assets\#OnePotatoKingdom_FULL\Models\#Planets\Tundra\Tundra_Design2" />
      <Folder Include="Assets\YandexGame\WorkingData" />
      <Folder Include="Assets\Downtown Game Studio\HYPERCASUAL - Simple Female &amp; Male Characters" />
@@ -237,6 +242,7 @@
      <Folder Include="Assets\Cartoon_Texture_Pack\WALLS\WALL_Bricks\Materials" />
      <Folder Include="Assets\#OnePotatoKingdom_FULL\Materials\Materials\Desert\Desert_Design5" />
      <Folder Include="Assets\#OnePotatoKingdom_FULL\Models\#Planets\Earth-Like\Earth-Like_Designs6" />
+     <Folder Include="Assets\SimpleCity\_Prefabs" />
      <Folder Include="Assets\Scripts\Controller" />
      <Folder Include="Assets\#OnePotatoKingdom_FULL\Materials\Materials\Temperate\Temperate_Design5" />
      <Folder Include="Assets\#OnePotatoKingdom_FULL\Materials\Materials\Tundra" />
@@ -303,6 +309,7 @@
      <Folder Include="Assets\Scenes\Logo" />
      <Folder Include="Assets\ToyBox\Models\Materials\Materials" />
      <Folder Include="Assets\#OnePotatoKingdom_FULL\Models\#Planets\Earth-Like\Earth-Like_Designs7" />
+     <Folder Include="Assets\SimpleCity\_Prefabs\Props" />
      <Folder Include="Assets\#OnePotatoKingdom_FULL\Models\#Planets\Desert" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <Folder Include="Assets\Downtown Game Studio\HYPERCASUAL - Simple Female &amp; Male Characters\Materials" />
@@ -310,6 +317,7 @@
      <Folder Include="Assets\Cartoon_Texture_Pack\WALLS\WALL_Bricks\Textures" />
      <Folder Include="Assets\Scripts" />
      <Folder Include="Assets\Cartoon_Texture_Pack\ROOF\ROOF_Hay" />
+     <Folder Include="Assets\SimpleCity\_Models" />
      <Folder Include="Assets\TextMesh Pro\Resources\Style Sheets" />
      <Folder Include="Assets\Cartoon_Texture_Pack\SAND\SAND_Beach\Materials" />
      <Folder Include="Assets\FarlandSkies\Skyboxes\CloudyCrown_03_Midnight\Textures" />
@@ -400,6 +408,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
      <Folder Include="Assets\#OnePotatoKingdom_FULL\Materials\Materials\Alien\Alien_Designs8" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+     <Folder Include="Assets\SimpleCity\_Demo" />
      <Folder Include="Assets\#OnePotatoKingdom_FULL\Models\#Planets\Frozen\Frozen_Design5" />
      <Folder Include="Assets\TextMesh Pro\Documentation" />
      <Folder Include="Assets\Scripts\GameManager" />
@@ -410,6 +419,7 @@
      <Folder Include="Assets\Cartoon_Texture_Pack\ROOF\ROOF_RoundTile_Bump\Textures" />
      <Folder Include="Assets\Cartoon_Texture_Pack\DIRT\Dirt_Path\Textures" />
      <Folder Include="Assets\Cartoon_Texture_Pack\ROOF\ROOF_RoundTile_Flat" />
+     <Folder Include="Assets\SimpleCity\_Textures" />
      <Folder Include="Assets\#OnePotatoKingdom_FULL\Models\#Planets\Temperate\Temperate_Design5" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
      <Folder Include="Assets\Animation\RewardAnim" />
@@ -428,6 +438,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
      <Folder Include="Assets\Cartoon_Texture_Pack\ROCKS\ROCKS_Cliff\Textures" />
      <Folder Include="Assets\CubexCube - Free City Pack I\Prefabs\Props_Road" />
+     <Folder Include="Assets\Sprite\GameDragAndDrop\Materials" />
      <Folder Include="Assets\YandexGame\Example\Content" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.12f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>

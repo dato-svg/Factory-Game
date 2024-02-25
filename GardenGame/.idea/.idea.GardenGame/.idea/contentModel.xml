@@ -304,6 +304,7 @@
           <e p="BlockUi.cs" t="Include" />
           <e p="Components" t="Include">
             <e p="CameraFollowComponent.cs" t="Include" />
+            <e p="DestroyComponent.cs" t="Include" />
             <e p="ExitSceneComponent.cs" t="Include" />
             <e p="MenuAnimationController.cs" t="Include" />
             <e p="OnCollisionComponent.cs" t="Include" />
@@ -326,6 +327,7 @@
           <e p="GameManager" t="Include">
             <e p="SoundManager.cs" t="Include" />
             <e p="StarsController.cs" t="Include" />
+            <e p="YGHelper.cs" t="Include" />
           </e>
           <e p="Resources" t="Include">
             <e p="ResourcesData.cs" t="Include" />
@@ -347,8 +349,19 @@
             <e p="UIGameManager.cs" t="Include" />
           </e>
         </e>
+        <e p="SimpleCity" t="Include">
+          <e p="_Demo" t="Include" />
+          <e p="_Materials" t="Include" />
+          <e p="_Models" t="Include" />
+          <e p="_Prefabs" t="Include">
+            <e p="Buildings" t="Include" />
+            <e p="Props" t="Include" />
+          </e>
+          <e p="_Textures" t="Include" />
+        </e>
         <e p="Sprite" t="Include">
           <e p="GameDragAndDrop" t="Include">
+            <e p="Materials" t="Include" />
             <e p="MissicsHead" t="Include" />
           </e>
         </e>
