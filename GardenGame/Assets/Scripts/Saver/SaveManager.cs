@@ -16,9 +16,9 @@ namespace Saver
         private  void Start()
         {
             ResourcesData.MoneyCount = 10;
-            ResourcesData.PhoneBuffer = 1;
-            ResourcesData.CompBuffer = 2;
-            ResourcesData.TVBuffer = 3;
+            ResourcesData.PhoneBuffer = 2;
+            ResourcesData.CompBuffer = 3;
+            ResourcesData.TVBuffer = 4;
             education = GameObject.Find("education");
             FirstSave = PlayerPrefs.GetInt("FistSave",0);
             if (FirstSave == 0)
@@ -27,8 +27,11 @@ namespace Saver
                 education.SetActive(true);
                 
             }
+            else
+            {
+                education.SetActive(false);
+            }
             
-            education.SetActive(false);
             LoadData();
             FindBlockStates();
             
