@@ -15,7 +15,7 @@ namespace Saver
         
         private  void Start()
         {
-            ResourcesData.MoneyCount = 1000000000;
+            ResourcesData.MoneyCount = 10;
             ResourcesData.PhoneBuffer = 2;
             ResourcesData.CompBuffer = 3;
             ResourcesData.TVBuffer = 4;

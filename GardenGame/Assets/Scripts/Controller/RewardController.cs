@@ -20,7 +20,7 @@ namespace Controller
         private void Start()
         {
             _saveManager = FindObjectOfType<SaveManager>();
-            _target = transform.Find("Momey").gameObject;
+            _target = transform.GetChild(0).gameObject;
             _target.SetActive(false);
             _animator = GetComponent<Animator>();
             EnableObject();
