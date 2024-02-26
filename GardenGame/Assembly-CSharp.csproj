@@ -75,6 +75,7 @@
      <Compile Include="Assets\Scripts\Controller\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Components\DestroyComponent.cs" />
      <Compile Include="Assets\YandexGame\Example\Scripts\ReceivingPurchaseExample.cs" />
+     <Compile Include="Assets\Scripts\LanguageController.cs" />
      <Compile Include="Assets\Scripts\Controller\HeroReader.cs" />
      <Compile Include="Assets\YandexGame\ScriptsYG\Leaderboard\UtilsLB.cs" />
      <Compile Include="Assets\YandexGame\ScriptsYG\Payments\PurchaseYG.cs" />
@@ -218,6 +219,7 @@
      <Folder Include="Assets\#OnePotatoKingdom_FULL\Models\#Planets\Desert\Desert_Design4" />
      <Folder Include="Assets\Prefabs" />
      <Folder Include="Assets\Cartoon_Texture_Pack\ROOF\ROOF_SquareTile_Bump\Textures" />
+     <None Include="Assets\Downtown Game Studio\HYPERCASUAL - Simple Female &amp; Male Characters\Documentation.txt" />
      <Folder Include="Assets\#OnePotatoKingdom_FULL\Materials\Materials\Tundra\Tundra_Design5" />
      <Folder Include="Assets\YandexGame\ScriptsYG\CustomRBT" />
      <Folder Include="Assets\YandexGame\ScriptsYG\UnityToolbag-main\ConditionallyVisiblePropertyDrawer" />
@@ -308,6 +310,7 @@
      <Folder Include="Assets\Cartoon_Texture_Pack\ROCKS\ROCKS_Volcanic" />
      <Folder Include="Assets\Scenes\Logo" />
      <Folder Include="Assets\ToyBox\Models\Materials\Materials" />
+     <Folder Include="Assets\Downtown Game Studio\HYPERCASUAL - Simple Female &amp; Male Characters\Scenes\SampleScene" />
      <Folder Include="Assets\#OnePotatoKingdom_FULL\Models\#Planets\Earth-Like\Earth-Like_Designs7" />
      <Folder Include="Assets\SimpleCity\_Prefabs\Props" />
      <Folder Include="Assets\#OnePotatoKingdom_FULL\Models\#Planets\Desert" />
@@ -371,6 +374,7 @@
      <Folder Include="Assets\#OnePotatoKingdom_FULL\Models\#Planets\Frozen\Frozen_Design2" />
      <Folder Include="Assets\CubexCube - Free City Pack I\Models\Props_Street" />
      <Folder Include="Assets\Downtown Game Studio\HYPERCASUAL - Simple Female &amp; Male Characters\Textures" />
+     <Folder Include="Assets\Animation\GirlAnimation" />
      <Folder Include="Assets\Prefabs\Resources" />
      <Folder Include="Assets\Cartoon_Texture_Pack\SAND\SAND_Underwater\Textures" />
      <Folder Include="Assets\#OnePotatoKingdom_FULL\Materials\Materials\Alien" />
@@ -412,10 +416,12 @@
      <Folder Include="Assets\#OnePotatoKingdom_FULL\Models\#Planets\Frozen\Frozen_Design5" />
      <Folder Include="Assets\TextMesh Pro\Documentation" />
      <Folder Include="Assets\Scripts\GameManager" />
+     <Folder Include="Assets\Downtown Game Studio\HYPERCASUAL - Simple Female &amp; Male Characters\Scenes\SampleScene_Profiles" />
      <Folder Include="Assets\Downtown Game Studio\HYPERCASUAL - Simple Female &amp; Male Characters\Textures\Female" />
      <Folder Include="Assets\Animation\PlayerAnimation" />
      <Folder Include="Assets\#OnePotatoKingdom_FULL\Materials\Materials" />
      <Folder Include="Assets\LowPolyEnviroPack_LITE_builtIn\BeachArea_Set1" />
+     <Folder Include="Assets\Downtown Game Studio\HYPERCASUAL - Simple Female &amp; Male Characters\Scenes" />
      <Folder Include="Assets\Cartoon_Texture_Pack\ROOF\ROOF_RoundTile_Bump\Textures" />
      <Folder Include="Assets\Cartoon_Texture_Pack\DIRT\Dirt_Path\Textures" />
      <Folder Include="Assets\Cartoon_Texture_Pack\ROOF\ROOF_RoundTile_Flat" />

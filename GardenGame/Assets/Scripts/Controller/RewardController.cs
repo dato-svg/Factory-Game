@@ -2,6 +2,7 @@ using System;
 using System.Threading.Tasks;
 using Resources;
 using Saver;
+using TMPro;
 using UnityEngine;
 using YG;
 
@@ -9,46 +10,58 @@ namespace Controller
 {
     public class RewardController : MonoBehaviour
     {
-        [SerializeField] private GameObject _target;
-        [SerializeField] private GameObject _language;
-        [SerializeField] private SaveManager _saveManager;
-        private Animator _animator;
-        private float _timeDelay= 110f;
-        private int _moneyCount = 300;
-        private bool isActive = false;
+        [SerializeField] private TextMeshProUGUI _priceOne;
+        [SerializeField] private TextMeshProUGUI _priceTwo;
+        [SerializeField] private int _moneyCountOne = 300;
+        [SerializeField] private int _defaultMoneyOne = 300;
         
+        [SerializeField] private int _moneyCountTwo = 50000;
+        [SerializeField] private int _defaultMoneyTwo = 50000;
+        [SerializeField] private int IndexReward = 1;
+        private SaveManager _saveManager;
+        private string Key;
+        
+
         private void Start()
         {
+            Key = gameObject.name;
+            _moneyCountOne = PlayerPrefs.GetInt(Key + "10",_defaultMoneyOne);
+            _moneyCountTwo = PlayerPrefs.GetInt(Key + "12",_defaultMoneyTwo);
             _saveManager = FindObjectOfType<SaveManager>();
-            _target = transform.GetChild(0).gameObject;
-            _target.SetActive(false);
-            _animator = GetComponent<Animator>();
-            EnableObject();
-        }
-        
-        public  void Closer()
-        {
-            _target.SetActive(false);
-            _animator.SetBool("Move",false);
         }
 
-        private async void EnableObject()
+        private void LateUpdate()
         {
-            
-            while (true)
-            {
-                await Task.Delay(TimeSpan.FromSeconds(_timeDelay));
-                _target.SetActive(true);
-                _animator.SetBool("Move",true);
-            }
-            
+            _priceOne.text = _moneyCountOne.ToString();
+            _priceTwo.text = _moneyCountTwo.ToString();
+            SaveMoney();
+            Debug.Log(IndexReward);
         }
+
 
 
         public void GiveReward()
         {
-            ResourcesData.MoneyCount += _moneyCount;
-            _saveManager.SaveAll();
+            if (IndexReward == 1)
+            {
+                ResourcesData.MoneyCount += _moneyCountOne;
+                _moneyCountOne *= 2; 
+                SaveMoney();
+                _saveManager.SaveAll();  
+            }
+
+            if (IndexReward == 2)
+            {
+                ResourcesData.MoneyCount += _moneyCountTwo;
+                _moneyCountTwo *= 2; 
+                SaveMoney();
+                _saveManager.SaveAll();  
+            }
+        }
+
+        public void ChangeIndex(int index)
+        {
+            IndexReward = index;
         }
 
         public void StartReward()
@@ -56,20 +69,12 @@ namespace Controller
             YandexGame.RewVideoShow(0);
         }
 
-        public void LanguageChange()
+        private void SaveMoney()
         {
-            if (!isActive)
-            {
-                _language.SetActive(true);
-                isActive = true;
-            }
-            else
-            {
-                _language.SetActive(false);
-                isActive = false;
-            }
-            
+            PlayerPrefs.SetInt(Key + "10",_moneyCountOne);
+            PlayerPrefs.SetInt(Key + "12",_moneyCountTwo);
         }
-        
+
+
     }
 }

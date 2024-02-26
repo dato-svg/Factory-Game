@@ -133,6 +133,7 @@
         </e>
         <e p="Animation" t="Include">
           <e p="CointAnimation" t="Include" />
+          <e p="GirlAnimation" t="Include" />
           <e p="MenuAnimation" t="Include" />
           <e p="PlayerAnimation" t="Include" />
           <e p="RewardAnim" t="Include" />
@@ -236,12 +237,17 @@
         </e>
         <e p="Downtown Game Studio" t="Include">
           <e p="HYPERCASUAL - Simple Female &amp; Male Characters" t="Include">
+            <e p="Documentation.txt" t="Include" />
             <e p="Materials" t="Include">
               <e p="Female" t="Include" />
               <e p="Male" t="Include" />
             </e>
             <e p="Models" t="Include" />
             <e p="Prefabs" t="Include" />
+            <e p="Scenes" t="Include">
+              <e p="SampleScene" t="Include" />
+              <e p="SampleScene_Profiles" t="Include" />
+            </e>
             <e p="Textures" t="Include">
               <e p="Female" t="Include" />
               <e p="Male" t="Include" />
@@ -329,6 +335,7 @@
             <e p="StarsController.cs" t="Include" />
             <e p="YGHelper.cs" t="Include" />
           </e>
+          <e p="LanguageController.cs" t="Include" />
           <e p="Resources" t="Include">
             <e p="ResourcesData.cs" t="Include" />
             <e p="ResourcesGive.cs" t="Include" />
