@@ -67,6 +67,7 @@ namespace Controller
         public void StartReward()
         {
             YandexGame.RewVideoShow(0);
+            
         }
 
         private void SaveMoney()
