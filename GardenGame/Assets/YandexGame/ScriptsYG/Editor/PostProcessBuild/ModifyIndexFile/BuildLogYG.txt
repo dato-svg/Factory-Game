@@ -1,2 +1,2 @@
-Build path: D:/FactoryGame1.1.6
-Build number: 17
+Build path: D:/FactoryGame2.0.8
+Build number: 18
