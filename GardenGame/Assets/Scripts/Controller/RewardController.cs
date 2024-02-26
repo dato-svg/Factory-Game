@@ -13,7 +13,7 @@ namespace Controller
         [SerializeField] private GameObject _language;
         [SerializeField] private SaveManager _saveManager;
         private Animator _animator;
-        private float _timeDelay= 150f;
+        private float _timeDelay= 110f;
         private int _moneyCount = 300;
         private bool isActive = false;
         
