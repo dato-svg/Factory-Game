@@ -7,7 +7,7 @@ namespace UI
     public class UIGameManager : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI phoneText;
-        [SerializeField] private TextMeshProUGUI moneyCount;
+        public TextMeshProUGUI moneyCount;
         [SerializeField] private TextMeshProUGUI compResources;
         [SerializeField] private TextMeshProUGUI tvResources;
     

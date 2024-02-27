@@ -21,11 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c2cc1110-44df-4838-9c07-5c708a03239f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GardenGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GardenGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/RewardController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/RewardController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/BuildLogYG.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/BuildLogYG.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/YandexGame/WorkingData/Editor/SavesEditorYG.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/YandexGame/WorkingData/Editor/SavesEditorYG.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BlockUi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BlockUi.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIGameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/8c/8c97e948ab04069272d200d05888b9e8" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/2000b0aE-inputdata.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/2000b0aE-inputdata.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/2000b0aE.dag" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/2000b0aE.dag" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/2000b0aE.dag.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/2000b0aE.dag.json" afterDir="false" />
@@ -237,10 +236,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Saver/IServisSaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Saver/BinaryServisSaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Saver/JsonServisRealize.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIGameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controller/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Resources/ResourcesGive.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BlockUi.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/SoundManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/CameraFollowComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controller/HeroReader.cs" />
@@ -262,6 +259,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/YGHelper.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LanguageController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controller/RewardController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIGameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BlockUi.cs" />
       </list>
     </option>
   </component>
@@ -401,6 +400,7 @@
       <workItem from="1708942049081" duration="88000" />
       <workItem from="1708964602822" duration="640000" />
       <workItem from="1708965869354" duration="477000" />
+      <workItem from="1709034492281" duration="4794000" />
     </task>
     <servers />
   </component>
