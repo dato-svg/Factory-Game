@@ -14,7 +14,7 @@ public class BlockUi : MonoBehaviour
     private TextMeshProUGUI _priceText;
     private GameObject blockbuiSound;
     private UIGameManager _playerPrice;
-    private float speed = 5;
+    private float speed = 4;
     
     private void Awake()
     {
@@ -22,7 +22,6 @@ public class BlockUi : MonoBehaviour
         blockbuiSound = GameObject.Find("BlockBuiSound");
         _saveManager = FindObjectOfType<SaveManager>();
         _priceText = GetComponent<TextMeshProUGUI>();
-        
         ShowPrice();
     }
          
@@ -37,8 +36,8 @@ public class BlockUi : MonoBehaviour
 
         if (ResourcesData.MoneyCount < price)
         {
-            _playerPrice.moneyCount.color = new Color(193,79,79);
-            GetComponent<TextMeshProUGUI>().color = new Color(193,79,79);
+            _playerPrice.moneyCount.color = new Color(198f / 255f, 33f / 255f, 33f / 255f);
+            GetComponent<TextMeshProUGUI>().color = new Color(198f / 255f, 33f / 255f, 33f / 255f);
         }
     }
 
@@ -57,8 +56,7 @@ public class BlockUi : MonoBehaviour
     
     private IEnumerator ReducePriceCoroutine()
     {
-        
-        float initialPrice = price;
+        int canBuy= 20;   
         while (price > 0)
         { 
            
@@ -69,7 +67,7 @@ public class BlockUi : MonoBehaviour
             price = Mathf.RoundToInt(currentPrice);
             ShowPrice(); 
           
-            if (price == 0)
+            if (price < canBuy)
             {
                 Debug.Log("YOU BUY");
                 onBuy?.Invoke();

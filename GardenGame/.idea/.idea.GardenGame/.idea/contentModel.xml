@@ -271,6 +271,19 @@
             </e>
           </e>
         </e>
+        <e p="KUBIKOS - World" t="Include">
+          <e p="Materials" t="Include" />
+          <e p="Models" t="Include">
+            <e p="Materials" t="Include" />
+          </e>
+          <e p="Prefabs" t="Include">
+            <e p="Cubes" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="Water_Shader.shader" t="Include" />
+          </e>
+          <e p="Textures" t="Include" />
+        </e>
         <e p="LowPolyEnviroPack_LITE_builtIn" t="Include">
           <e p="BeachArea_Set1" t="Include">
             <e p="Materials" t="Include" />
@@ -366,10 +379,25 @@
           </e>
           <e p="_Textures" t="Include" />
         </e>
+        <e p="SoftSnow" t="Include">
+          <e p="Materials" t="Include" />
+          <e p="Prefabs" t="Include" />
+          <e p="Scenes" t="Include" />
+          <e p="Skybox" t="Include">
+            <e p="Materials" t="Include" />
+            <e p="Textures" t="Include" />
+          </e>
+          <e p="SoftSnow - Readme.txt" t="Include" />
+          <e p="Textures" t="Include" />
+        </e>
         <e p="Sprite" t="Include">
           <e p="GameDragAndDrop" t="Include">
             <e p="Materials" t="Include" />
             <e p="MissicsHead" t="Include" />
+            <e p="PaperImage" t="Include">
+              <e p="paper" t="Include" />
+              <e p="рамка" t="Include" />
+            </e>
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">

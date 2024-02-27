@@ -20,11 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2cc1110-44df-4838-9c07-5c708a03239f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GardenGame/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GardenGame/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GardenGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GardenGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AurynSky/Desert Pack/Materials/QuickSandMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AurynSky/Desert Pack/Materials/QuickSandMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BlockState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BlockState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BlockUi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BlockUi.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIGameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/RewardController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/RewardController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/GameDragAndDrop/Materials/Snow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprite/GameDragAndDrop/Materials/Snow.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/BuildLogYG.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/BuildLogYG.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/YandexGame/WorkingData/Editor/SavesEditorYG.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/YandexGame/WorkingData/Editor/SavesEditorYG.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/8c/8c97e948ab04069272d200d05888b9e8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/62/620e25534dd65e05633fabffad6c312a" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/2000b0aE-inputdata.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/2000b0aE-inputdata.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/2000b0aE.dag" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/2000b0aE.dag" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/2000b0aE.dag.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/2000b0aE.dag.json" afterDir="false" />
@@ -120,7 +129,6 @@
       <change beforePath="$PROJECT_DIR$/Library/Bee/artifacts/WebGL/il2cppOutput/data/Metadata/global-metadata.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/artifacts/WebGL/il2cppOutput/data/Metadata/global-metadata.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/artifacts/WebGL/webgl.data" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/artifacts/WebGL/webgl.data" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/artifacts/csharpactions/boot.config_7kyv.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/artifacts/csharpactions/boot.config_7kyv.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Bee/artifacts/rsp/4747638433968585886.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/artifacts/rsp/4747638433968585886.rsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/artifacts/unitylinker_ber2.traceevents" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/artifacts/unitylinker_ber2.traceevents" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/backend1.traceevents" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/backend1.traceevents" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/backend2.traceevents" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/backend2.traceevents" afterDir="false" />
@@ -145,7 +153,9 @@
       <change beforePath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptMapper" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptMapper" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Search/transactions.db" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Search/transactions.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/EditorEncounteredVariants" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ShaderCache/EditorEncounteredVariants" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/MainStageHierarchy/b0/b0b0089f7298553263d402295f8615ae.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/MainStageHierarchy/b0/b0b0089f7298553263d402295f8615ae.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/a1/a1e8a1885b2fb46a4971c9dd44b1fceb.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/a1/a1e8a1885b2fb46a4971c9dd44b1fceb.json" afterDir="false" />
@@ -154,6 +164,8 @@
       <change beforePath="$PROJECT_DIR$/Library/ilpp.pid" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ilpp.pid" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -253,14 +265,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/EducationManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controller/CoinManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BlockState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/DestroyComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Saver/SaveManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager/YGHelper.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LanguageController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controller/RewardController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIGameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BlockState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BlockUi.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controller/RewardController.cs" />
       </list>
     </option>
   </component>
@@ -401,6 +413,8 @@
       <workItem from="1708964602822" duration="640000" />
       <workItem from="1708965869354" duration="477000" />
       <workItem from="1709034492281" duration="4794000" />
+      <workItem from="1709048260873" duration="2837000" />
+      <workItem from="1709058498037" duration="1087000" />
     </task>
     <servers />
   </component>
