@@ -1,5 +1,3 @@
-using System;
-using System.Threading.Tasks;
 using Resources;
 using Saver;
 using TMPro;
@@ -20,16 +18,17 @@ namespace Controller
         [SerializeField] private int IndexReward = 1;
         private SaveManager _saveManager;
         private string Key;
-        public AudioListener _listener;
+        [SerializeField] private AudioSource[] _listener;
 
         private void Start()
         {
             Key = gameObject.name;
-            _listener = FindObjectOfType<AudioListener>();
             _moneyCountOne = PlayerPrefs.GetInt(Key + "10",_defaultMoneyOne);
             _moneyCountTwo = PlayerPrefs.GetInt(Key + "12",_defaultMoneyTwo);
             _saveManager = FindObjectOfType<SaveManager>();
         }
+
+       
 
         private void LateUpdate()
         {
@@ -43,7 +42,8 @@ namespace Controller
 
         public void GiveReward()
         {
-            _listener.enabled = true;
+            
+            
             if (IndexReward == 1)
             {
                 ResourcesData.MoneyCount += _moneyCountOne;
@@ -71,10 +71,15 @@ namespace Controller
             YandexGame.RewVideoShow(0);
         }
 
-        public void StopGame()
+        public void GameController(float volume)
         {
-            _listener.enabled = false;
+            foreach (var item in _listener)
+            {
+                item.volume = volume;
+            }
         }
+
+        
 
         private void SaveMoney()
         {
