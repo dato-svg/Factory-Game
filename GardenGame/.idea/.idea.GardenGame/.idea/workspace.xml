@@ -20,15 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2cc1110-44df-4838-9c07-5c708a03239f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GardenGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GardenGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BlockState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BlockState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BlockUi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BlockUi.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/RewardController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/RewardController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/BuildLogYG.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/BuildLogYG.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/97/97e72380e8f8c3a655344f4f6b1181eb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/cd/cdb5f10eb6f96e99a35231f0a8ef6429" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/2000b0aE-inputdata.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/2000b0aE-inputdata.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/2000b0aE.dag" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/2000b0aE.dag" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/2000b0aE.dag.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/2000b0aE.dag.json" afterDir="false" />
@@ -124,7 +116,6 @@
       <change beforePath="$PROJECT_DIR$/Library/Bee/artifacts/WebGL/il2cppOutput/data/Metadata/global-metadata.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/artifacts/WebGL/il2cppOutput/data/Metadata/global-metadata.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/artifacts/WebGL/webgl.data" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/artifacts/WebGL/webgl.data" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/artifacts/csharpactions/boot.config_7kyv.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/artifacts/csharpactions/boot.config_7kyv.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Bee/artifacts/rsp/4747638433968585886.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/artifacts/rsp/4747638433968585886.rsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/artifacts/unitylinker_ber2.traceevents" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/artifacts/unitylinker_ber2.traceevents" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/backend1.traceevents" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/backend1.traceevents" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/backend2.traceevents" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/backend2.traceevents" afterDir="false" />
@@ -156,6 +147,7 @@
       <change beforePath="$PROJECT_DIR$/Library/UIElements/EditorWindows/UnityEditor.InspectorWindow.pref" beforeDir="false" afterPath="$PROJECT_DIR$/Library/UIElements/EditorWindows/UnityEditor.InspectorWindow.pref" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/com.unity.ide.rider/PersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/com.unity.ide.rider/PersistedState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ilpp.pid" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ilpp.pid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
@@ -406,7 +398,7 @@
       <workItem from="1709034492281" duration="4794000" />
       <workItem from="1709048260873" duration="2837000" />
       <workItem from="1709058498037" duration="1087000" />
-      <workItem from="1709110461869" duration="2576000" />
+      <workItem from="1709110461869" duration="3179000" />
     </task>
     <servers />
   </component>
