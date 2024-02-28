@@ -68,9 +68,12 @@ namespace Controller
 
         public void StartReward()
         {
-            _listener.enabled = false;
             YandexGame.RewVideoShow(0);
-            
+        }
+
+        public void StopGame()
+        {
+            _listener.enabled = false;
         }
 
         private void SaveMoney()

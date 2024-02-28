@@ -29,16 +29,16 @@ public class BlockState : MonoBehaviour
     [ContextMenu("SaveData")]
     public async void SaveData()
     {
-        ResourcesData.SaveResources(KEY+"IsActive12",isActive);
-        ResourcesData.SaveResources(KEY+"IsBuy12",isBuy);
+        ResourcesData.SaveResources(KEY+"IsActive17",isActive);
+        ResourcesData.SaveResources(KEY+"IsBuy17",isBuy);
     }
 
     
     [ContextMenu("LoadData")]
     private void LoadSystem()
     {
-        ResourcesData.LoadResources(KEY+"IsActive12",ref isActive);
-        ResourcesData.LoadResources(KEY+"IsBuy12",ref isBuy);
+        ResourcesData.LoadResources(KEY+"IsActive17",ref isActive);
+        ResourcesData.LoadResources(KEY+"IsBuy17",ref isBuy);
     }
 
     public void ActivateActiveBool(int isActive = 0)
@@ -92,11 +92,7 @@ public class BlockState : MonoBehaviour
         
         
     }
-        
-
-        
-
-    }
+}
    
 
 

@@ -56,6 +56,7 @@ public class BlockUi : MonoBehaviour
     
     private IEnumerator ReducePriceCoroutine()
     {
+        var startPrice = price;
         int canBuy= 20;   
         while (price > 0)
         { 
@@ -67,10 +68,12 @@ public class BlockUi : MonoBehaviour
             price = Mathf.RoundToInt(currentPrice);
             ShowPrice(); 
           
-            if (price < canBuy)
+            if (price < canBuy)  
             {
                 Debug.Log("YOU BUY");
                 onBuy?.Invoke();
+                ResourcesData.MoneyCount -= startPrice;
+                _playerPrice.ShowResources();
                 _saveManager.SaveAll();
                 blockbuiSound.GetComponent<AudioSource>().Play();
             }
