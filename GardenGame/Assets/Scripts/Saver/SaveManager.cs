@@ -7,20 +7,34 @@ namespace Saver
     public class SaveManager : MonoBehaviour
     {
         [SerializeField] private BlockState[] blockStates;
-        [SerializeField]  private ResourcesDataModel resourcesModel;
         private const float AutoSaveInterval = 60f;
         private const  string KEY = "Resources";
+
+        private GameObject education;
+        private int FirstSave = 0;
         
-        
-        private void Start()
+        private  void Start()
         {
-            if (ResourcesData.HasLoad(KEY))
+            ResourcesData.MoneyCount = 10;
+            ResourcesData.PhoneBuffer = 2;
+            ResourcesData.CompBuffer = 3;
+            ResourcesData.TVBuffer = 4;
+            education = GameObject.Find("education");
+            FirstSave = PlayerPrefs.GetInt("FistSave",0);
+            if (FirstSave == 0)
             {
-                ResourcesData.LoadResources<ResourcesDataModel>(KEY,LoadData); //TODO - CHANGE LOAD SYSTEM
+                SaveData();
+                education.SetActive(true);
+                
             }
-           
+            else
+            {
+                education.SetActive(false);
+            }
+            
+            LoadData();
             FindBlockStates();
-            StartCoroutine(AutoSaver());
+            
         }
 
         private void FindBlockStates()
@@ -32,15 +46,7 @@ namespace Saver
             }
         }
 
-        private IEnumerator AutoSaver()
-        {
-            while (true)
-            {
-                yield return new WaitForSeconds(AutoSaveInterval);
-                SaveAll();
-            }
-            
-        }
+        
 
         public void SaveAll()
         {
@@ -60,28 +66,30 @@ namespace Saver
 
         private void SaveData()
         {
-            resourcesModel.PhoneCount =  ResourcesData.PhoneCount;
-            resourcesModel.MoneyCount = ResourcesData.MoneyCount;
-            resourcesModel.CompCount = ResourcesData.CompCount;
-            resourcesModel.TVCount = ResourcesData.TVCount;
-            resourcesModel.PhoneBuffer = ResourcesData.PhoneBuffer;
-            resourcesModel.CompBuffer = ResourcesData.CompBuffer;
-            resourcesModel.TVBuffer = ResourcesData.TVBuffer;
-            ResourcesData.SaveResources(KEY,resourcesModel); //TODO - CHANGE SAVER SYSTEM
+            ResourcesData.SaveResources(KEY+"MoneyCount2",ResourcesData.MoneyCount);
+            ResourcesData.SaveResources(KEY+"PhoneCount2",ResourcesData.PhoneCount);
+            ResourcesData.SaveResources(KEY+"CompCount2",ResourcesData.CompCount);
+            ResourcesData.SaveResources(KEY+"TVCount2",ResourcesData.TVCount);
+            ResourcesData.SaveResources(KEY+"PhoneBuffer2",ResourcesData.PhoneBuffer);
+            ResourcesData.SaveResources(KEY+"CompBuffer2",ResourcesData.CompBuffer);
+            ResourcesData.SaveResources(KEY+"TVBuffer2",ResourcesData.TVBuffer);
+            PlayerPrefs.SetInt("FistSave",FirstSave);
+            FirstSave = 1;
         }
 
-        private void LoadData(ResourcesDataModel resourcesDataModel)
+        private void LoadData()
         {
-            ResourcesData.PhoneCount = resourcesDataModel.PhoneCount;
-            ResourcesData.MoneyCount = resourcesDataModel.MoneyCount;
-            ResourcesData.CompCount = resourcesDataModel.CompCount;
-            ResourcesData.TVCount = resourcesDataModel.TVCount;
-            ResourcesData.PhoneBuffer = resourcesDataModel.PhoneBuffer;
-            ResourcesData.CompBuffer = resourcesDataModel.CompBuffer;
-            ResourcesData.TVBuffer = resourcesDataModel.TVBuffer;
+            ResourcesData.LoadResources(KEY + "MoneyCount2", ref ResourcesData.MoneyCount);
+            ResourcesData.LoadResources(KEY + "PhoneCount2", ref ResourcesData.PhoneCount);
+            ResourcesData.LoadResources(KEY + "CompCount2", ref ResourcesData.CompCount);
+            ResourcesData.LoadResources(KEY + "TVCount2", ref ResourcesData.TVCount);
+            ResourcesData.LoadResourcesDefault(KEY + "PhoneBuffer2", ref ResourcesData.PhoneBuffer);
+            ResourcesData.LoadResourcesDefault(KEY + "CompBuffer2", ref ResourcesData.CompBuffer);
+            ResourcesData.LoadResourcesDefault(KEY + "TVBuffer2", ref ResourcesData.TVBuffer);
         }
 
-        private void Update()
+
+        private void LateUpdate()
         {
             SaveData();
         }

@@ -4,6 +4,7 @@
     <e p="C:\Users\PRO_TEAM_C#\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
     <e p="C:\Users\PRO_TEAM_C#\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_GardenGame.-393222270.00" t="ExcludeRecursive" />
     <e p="C:\Users\PRO_TEAM_C#\Desktop\Git-hub\Factory\Factory-Game\GardenGame" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="#OnePotatoKingdom_FULL" t="Include">
@@ -131,10 +132,13 @@
           </e>
         </e>
         <e p="Animation" t="Include">
+          <e p="CointAnimation" t="Include" />
+          <e p="GirlAnimation" t="Include" />
           <e p="MenuAnimation" t="Include" />
           <e p="PlayerAnimation" t="Include" />
           <e p="RewardAnim" t="Include" />
         </e>
+        <e p="Atlasses" t="Include" />
         <e p="Audio" t="Include">
           <e p="BackGroundMusic" t="Include" />
         </e>
@@ -233,12 +237,17 @@
         </e>
         <e p="Downtown Game Studio" t="Include">
           <e p="HYPERCASUAL - Simple Female &amp; Male Characters" t="Include">
+            <e p="Documentation.txt" t="Include" />
             <e p="Materials" t="Include">
               <e p="Female" t="Include" />
               <e p="Male" t="Include" />
             </e>
             <e p="Models" t="Include" />
             <e p="Prefabs" t="Include" />
+            <e p="Scenes" t="Include">
+              <e p="SampleScene" t="Include" />
+              <e p="SampleScene_Profiles" t="Include" />
+            </e>
             <e p="Textures" t="Include">
               <e p="Female" t="Include" />
               <e p="Male" t="Include" />
@@ -261,6 +270,19 @@
               <e p="Textures" t="Include" />
             </e>
           </e>
+        </e>
+        <e p="KUBIKOS - World" t="Include">
+          <e p="Materials" t="Include" />
+          <e p="Models" t="Include">
+            <e p="Materials" t="Include" />
+          </e>
+          <e p="Prefabs" t="Include">
+            <e p="Cubes" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="Water_Shader.shader" t="Include" />
+          </e>
+          <e p="Textures" t="Include" />
         </e>
         <e p="LowPolyEnviroPack_LITE_builtIn" t="Include">
           <e p="BeachArea_Set1" t="Include">
@@ -288,6 +310,12 @@
           <e p="Resources" t="Include" />
         </e>
         <e p="Scenes" t="Include">
+          <e p="Logo" t="Include">
+            <e p="ForLogo" t="Include">
+              <e p="ForLogo" t="Include" />
+              <e p="NewScene.cs" t="Include" />
+            </e>
+          </e>
           <e p="SampleScene" t="Include" />
         </e>
         <e p="Scripts" t="Include">
@@ -295,12 +323,15 @@
           <e p="BlockUi.cs" t="Include" />
           <e p="Components" t="Include">
             <e p="CameraFollowComponent.cs" t="Include" />
+            <e p="DestroyComponent.cs" t="Include" />
             <e p="ExitSceneComponent.cs" t="Include" />
             <e p="MenuAnimationController.cs" t="Include" />
             <e p="OnCollisionComponent.cs" t="Include" />
             <e p="OnTriggerComponent.cs" t="Include" />
           </e>
           <e p="Controller" t="Include">
+            <e p="CoinManager.cs" t="Include" />
+            <e p="CubeController.cs" t="Include" />
             <e p="HeroReader.cs" t="Include" />
             <e p="InputSystem" t="Include" />
             <e p="MeeseeksController.cs" t="Include" />
@@ -315,7 +346,9 @@
           <e p="GameManager" t="Include">
             <e p="SoundManager.cs" t="Include" />
             <e p="StarsController.cs" t="Include" />
+            <e p="YGHelper.cs" t="Include" />
           </e>
+          <e p="LanguageController.cs" t="Include" />
           <e p="Resources" t="Include">
             <e p="ResourcesData.cs" t="Include" />
             <e p="ResourcesGive.cs" t="Include" />
@@ -328,7 +361,7 @@
             <e p="SaveManager.cs" t="Include" />
             <e p="UnityCloudServisController.cs" t="Include" />
           </e>
-          <e p="SpawnerResources.cs" t="Include" />
+          <e p="SpawnBlock.cs" t="Include" />
           <e p="SpawnParticles.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="TimerController.cs" t="Include" />
@@ -336,9 +369,35 @@
             <e p="UIGameManager.cs" t="Include" />
           </e>
         </e>
+        <e p="SimpleCity" t="Include">
+          <e p="_Demo" t="Include" />
+          <e p="_Materials" t="Include" />
+          <e p="_Models" t="Include" />
+          <e p="_Prefabs" t="Include">
+            <e p="Buildings" t="Include" />
+            <e p="Props" t="Include" />
+          </e>
+          <e p="_Textures" t="Include" />
+        </e>
+        <e p="SoftSnow" t="Include">
+          <e p="Materials" t="Include" />
+          <e p="Prefabs" t="Include" />
+          <e p="Scenes" t="Include" />
+          <e p="Skybox" t="Include">
+            <e p="Materials" t="Include" />
+            <e p="Textures" t="Include" />
+          </e>
+          <e p="SoftSnow - Readme.txt" t="Include" />
+          <e p="Textures" t="Include" />
+        </e>
         <e p="Sprite" t="Include">
           <e p="GameDragAndDrop" t="Include">
+            <e p="Materials" t="Include" />
             <e p="MissicsHead" t="Include" />
+            <e p="PaperImage" t="Include">
+              <e p="paper" t="Include" />
+              <e p="рамка" t="Include" />
+            </e>
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">
@@ -385,6 +444,152 @@
             </e>
           </e>
           <e p="Textures" t="Include" />
+        </e>
+        <e p="WebGLTemplates" t="Include">
+          <e p="LICENSE.txt" t="Include" />
+          <e p="Notices.txt" t="Include" />
+          <e p="PluginYG" t="Include">
+            <e p="TemplateData" t="Include" />
+          </e>
+        </e>
+        <e p="YandexGame" t="Include">
+          <e p="DebuggingMode" t="Include">
+            <e p="Prefabs" t="Include" />
+            <e p="Scripts" t="Include">
+              <e p="DebuggingModeYG.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Example" t="Include">
+            <e p="Content" t="Include">
+              <e p="Materials" t="Include" />
+              <e p="Textures" t="Include" />
+            </e>
+            <e p="Scenes" t="Include">
+              <e p="ExampleYG" t="Include" />
+              <e p="ExampleYG_Two" t="Include" />
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="DebugViewing.cs" t="Include" />
+              <e p="GetPlayerData.cs" t="Include" />
+              <e p="LanguageExample.cs" t="Include" />
+              <e p="NewResultLBExample.cs" t="Include" />
+              <e p="OpenAuthorizationDialog.cs" t="Include" />
+              <e p="ReceivingPurchaseExample.cs" t="Include" />
+              <e p="RewardedAd.cs" t="Include" />
+              <e p="SaverTest.cs" t="Include" />
+              <e p="SwitchSceneTest.cs" t="Include" />
+              <e p="YandexMetricaExample.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Fonts" t="Include">
+            <e p="LICENSE.txt" t="Include" />
+          </e>
+          <e p="Plugins" t="Include" />
+          <e p="Prefabs" t="Include">
+            <e p="Banners" t="Include" />
+            <e p="Leaderboards" t="Include" />
+            <e p="Payments" t="Include" />
+          </e>
+          <e p="Readme.txt" t="Include" />
+          <e p="ScriptsYG" t="Include">
+            <e p="ActivityOnAuthorizationYG.cs" t="Include" />
+            <e p="CustomRBT" t="Include">
+              <e p="BannerYG.cs" t="Include" />
+              <e p="Editor" t="Include">
+                <e p="BannerYGEditor.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Editor" t="Include">
+              <e p="CreateYandexGameEditor.cs" t="Include" />
+              <e p="DocumentationEditor.cs" t="Include" />
+              <e p="Icons" t="Include" />
+              <e p="PostProcessBuild" t="Include">
+                <e p="ArchivingBuild.cs" t="Include" />
+                <e p="BuildLog.cs" t="Include" />
+                <e p="ModifyIndexFile" t="Include">
+                  <e p="AdWhenLoadingGame.cs" t="Include" />
+                  <e p="BackgroundFormat.cs" t="Include" />
+                  <e p="BuildLogYG.txt" t="Include" />
+                  <e p="LogoFormat.cs" t="Include" />
+                  <e p="MetricaCounterID.cs" t="Include" />
+                  <e p="ModifyBuildManager.cs" t="Include" />
+                  <e p="PixelRatioMobile.cs" t="Include" />
+                  <e p="SaveQuitGame.cs" t="Include" />
+                </e>
+                <e p="PostProcessBuild.cs" t="Include" />
+              </e>
+              <e p="Utils" t="Include">
+                <e p="DefineSymbols.cs" t="Include" />
+                <e p="ModificationScripts.cs" t="Include" />
+                <e p="PackageDownloader.cs" t="Include" />
+              </e>
+            </e>
+            <e p="ForVisualScriptYG.cs" t="Include" />
+            <e p="GetPlayerYG.cs" t="Include" />
+            <e p="GraphicSettingsYG.cs" t="Include" />
+            <e p="ImageLoadYG.cs" t="Include" />
+            <e p="InfoYG" t="Include">
+              <e p="Editor" t="Include">
+                <e p="InfoYGEditor.cs" t="Include" />
+              </e>
+              <e p="InfoYG.cs" t="Include" />
+            </e>
+            <e p="Inside" t="Include">
+              <e p="CallingAnEvent.cs" t="Include" />
+              <e p="ConfigYG.cs" t="Include" />
+            </e>
+            <e p="Language Translation" t="Include">
+              <e p="Editor" t="Include">
+                <e p="AutoLocalizationMasseWindow.cs" t="Include" />
+                <e p="CSVFileEditorWindow.cs" t="Include" />
+                <e p="CSVManager.cs" t="Include" />
+                <e p="FontMasseInstallEditorWindow.cs" t="Include" />
+                <e p="LanguageYGEditor.cs" t="Include" />
+                <e p="TranslationTableEditorWindow.cs" t="Include" />
+              </e>
+              <e p="LanguageYG.cs" t="Include" />
+              <e p="LangYGAdditionalText.cs" t="Include" />
+              <e p="UtilsLang.cs" t="Include" />
+            </e>
+            <e p="Leaderboard" t="Include">
+              <e p="LBPlayerDataYG.cs" t="Include" />
+              <e p="LeaderboardYG.cs" t="Include" />
+              <e p="UtilsLB.cs" t="Include" />
+            </e>
+            <e p="Payments" t="Include">
+              <e p="ConsumePurchasesYG.cs" t="Include" />
+              <e p="PaymentsCatalogYG.cs" t="Include" />
+              <e p="PurchaseYG.cs" t="Include" />
+              <e p="UtilsPayments.cs" t="Include" />
+            </e>
+            <e p="PromptYG.cs" t="Include" />
+            <e p="ReviewYG.cs" t="Include" />
+            <e p="UnityToolbag-main" t="Include">
+              <e p="ConditionallyVisiblePropertyDrawer" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="ConditionallyVisiblePropertyDrawer.cs" t="Include" />
+                </e>
+                <e p="Runtime" t="Include">
+                  <e p="ConditionallyVisibleAttribute.cs" t="Include" />
+                </e>
+              </e>
+              <e p="LICENSE.txt" t="Include" />
+              <e p="Notices.txt" t="Include" />
+            </e>
+            <e p="ViewingAdsYG.cs" t="Include" />
+            <e p="YandexGame.cs" t="Include" />
+            <e p="YandexMetrica" t="Include">
+              <e p="JsonUtils.cs" t="Include" />
+              <e p="YandexMetrica.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Third-Party Notices.txt" t="Include" />
+          <e p="WorkingData" t="Include">
+            <e p="Editor" t="Include">
+              <e p="SavesEditorYG.json" t="Include" />
+            </e>
+            <e p="SavesYG.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="GardenGame.sln" t="IncludeFlat" />

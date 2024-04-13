@@ -5,7 +5,7 @@ using Unity.Services.CloudSave;
 using Unity.Services.Core;
 using UnityEngine;
 
-namespace Saver
+namespace Assets.Scripts.Saver
 {
     public class UnityCloudServisController : MonoBehaviour
     {
@@ -21,17 +21,19 @@ namespace Saver
             await CloudSaveService.Instance.Data.ForceSaveAsync(data);
             Debug.Log($"Saved data {string.Join(',', data[key])}");
         }
-
+        
+        
+        
+        
         public static async Task<T> LoadData<T>(string key)
         {
             Dictionary<string, string> data = await CloudSaveService.Instance.Data.LoadAsync(new HashSet<string> {key});
-            string saveData = data[key];
+            var saveData = data[key];
             var saveJson = JsonUtility.FromJson<T>(saveData);
-
             return saveJson;
-
+            
+           
         }
-    
     
     }
 }

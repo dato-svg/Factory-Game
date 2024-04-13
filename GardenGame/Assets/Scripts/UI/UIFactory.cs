@@ -1,5 +1,4 @@
-using System;
-using Saver;
+using Resources;
 using TMPro;
 using UnityEngine;
 
@@ -8,53 +7,49 @@ namespace UI
     public class UIFactory : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI updatePriceTxt;
-        [SerializeField] private int updatePrice;
-        [SerializeField] private UIFactoryData _uiFactoryData;
-        
-        private IServisSaver _servisSaver;
+        public int UpdatePrice;
+
+        private int FirstSaveStart = 0;
         private  string Key;
-        public int UpdatePrice
-        {
-            get => updatePrice;
-            set => updatePrice = value;
-        }
+        
 
 
-        private void Start()
+        
+        private  void Start()
         {
             Key = gameObject.name;
-            _servisSaver = new JsonServisRealize(); // TODO - CHANGE SAVER LOAD SYSTEM
-           
-            if (_servisSaver.HasData(Key))
+            FirstSaveStart = PlayerPrefs.GetInt(Key +"FirstSaveStart", 0);
+            if (FirstSaveStart == 0)
             {
-                LoadData();
+                UpdatePrice = 100;
+                SaveData();
             }
-            
-            
+            else
+            {
+                ResourcesData.LoadResources(Key+"2", ref UpdatePrice);
+            }
+           
+          
+
         }
 
+        
         private void SaveData()
         {
-            _uiFactoryData.UpdatePrice = UpdatePrice;
-            _servisSaver.Save(Key, _uiFactoryData);
+            ResourcesData.SaveResources(Key+"2",UpdatePrice);
+            FirstSaveStart = 1;
+            PlayerPrefs.SetInt(Key +"FirstSaveStart",FirstSaveStart);
         }
 
-        private void LoadData()
-        {
-            _servisSaver.Load<UIFactoryData>(Key,Loader);  // TODO - CHANGE SAVER LOAD SYSTEM
-        }
-
-        private void Loader(UIFactoryData uiFactory)
-        {
-            this.UpdatePrice = uiFactory.UpdatePrice;
-        }
+        
+        
 
         public void ShowPrice()
         {
             updatePriceTxt.text = UpdatePrice.ToString();
         }
 
-        private void FixedUpdate()
+        private void LateUpdate()
         {
             ShowPrice();
             SaveData();
@@ -62,10 +57,5 @@ namespace UI
         }
         
     }
-
-    [Serializable]
-    public class UIFactoryData
-    {
-        public int UpdatePrice;
-    }
 }
+

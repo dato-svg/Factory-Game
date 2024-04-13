@@ -1,0 +1,2 @@
+Build path: D:/FactoryGame4.0.0
+Build number: 26
