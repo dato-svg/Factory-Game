@@ -1,3 +1,3 @@
 # Factory-Game
 calual game
-![Описание скриншота](images/имя_файла.png)
+![Описание скриншота](images/222.png)
