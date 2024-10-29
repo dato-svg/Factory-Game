@@ -23,6 +23,4 @@ calual game
 
 ![Описание скриншота](https://github.com/dato-svg/Factory-Game/blob/Yandex-Branch/GardenGame/Assets/Screen/FactoryGame2.png)
 
-![Описание скриншота](https://github.com/dato-svg/Factory-Game/blob/Yandex-Branch/GardenGame/Assets/Screen/FactoryGame3.png)
-
 ![Описание скриншота](https://github.com/dato-svg/Factory-Game/blob/Yandex-Branch/GardenGame/Assets/Screen/FactoryGame4.png)
